@@ -4,6 +4,20 @@
 h1 {
   color: blue;
 }
+h2 {
+  color: rgb(13, 13, 124);
+}
 p {
-  color: red;
+  color: rgb(0, 0, 0);
+}
+
+
+
+.skip {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
 }
