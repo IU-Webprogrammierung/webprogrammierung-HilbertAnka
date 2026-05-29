@@ -1,11 +1,54 @@
-body {font-family: Montserrat;
+/* Dancing Script */
+@font-face {
+  font-family: 'Dancing Script';
+  src: url('../fonts/dancing-script-regular.woff2') format('woff2');
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Dancing Script';
+  src: url('../fonts/dancing-script-700.woff2') format('woff2');
+  font-weight: 700;
+  font-display: swap;
+}
+
+/* Montserrat */
+@font-face {
+  font-family: 'Montserrat';
+  src: url('../fonts/montserrat-regular.woff2') format('woff2');
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('../fonts/montserrat-500.woff2') format('woff2');
+  font-weight: 500;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('../fonts/montserrat-700.woff2') format('woff2');
+  font-weight: 700;
+  font-display: swap;
+}
+
+
+
+
+body {font-family: 'Montserrat', sans-serif;
   background-color: rgb(230, 252, 255);
 }
-h1 {font-family: Dancing Script;
+h1 {font-family: 'Dancing Script', cursive;
   color: blue;
 }
-h2 {font-family: Dancing Script;
+h2 {font-family: 'Dancing Script', cursive;
   color: rgb(13, 13, 124);
+}
+h3 {font-family: 'Dancing Script', cursive;
+  color: rgb(10, 10, 72);
 }
 p {
   color: rgb(0, 0, 0);
