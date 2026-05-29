@@ -1,10 +1,10 @@
- body {
+body {font-family: Montserrat;
   background-color: rgb(230, 252, 255);
 }
-h1 {
+h1 {font-family: Dancing Script;
   color: blue;
 }
-h2 {
+h2 {font-family: Dancing Script;
   color: rgb(13, 13, 124);
 }
 p {
