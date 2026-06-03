@@ -1,10 +1,12 @@
+loadComponent("header", "components/header.html").then(() =>
+  loadLanguage(currentLanguage),
+);
+
+loadComponent("footer", "components/footer.html");
+
 async function loadComponent(id, file) {
-
-    const response = await fetch(file);
-    const html = await response.text();
-
-    document.getElementById(id).innerHTML = html;
+  const response = await fetch(file);
+  const html = await response.text();
+  const element = document.querySelector(id);
+  element.innerHTML = html;
 }
-
-loadComponent("navbar", "components/navbar.html")
-    .then(() => loadLanguage(currentLanguage));
