@@ -1,60 +1,189 @@
+/* =====================
+   FONTS
+   ===================== */
+
 /* Dancing Script */
 @font-face {
-  font-family: 'Dancing Script';
-  src: url('../fonts/dancing-script-regular.woff2') format('woff2');
+  font-family: "Dancing Script";
+  src: url("../fonts/dancing-script-regular.woff2") format("woff2");
   font-weight: 400;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Dancing Script';
-  src: url('../fonts/dancing-script-700.woff2') format('woff2');
+  font-family: "Dancing Script";
+  src: url("../fonts/dancing-script-700.woff2") format("woff2");
   font-weight: 700;
   font-display: swap;
 }
 
 /* Montserrat */
 @font-face {
-  font-family: 'Montserrat';
-  src: url('../fonts/montserrat-regular.woff2') format('woff2');
+  font-family: "Montserrat";
+  src: url("../fonts/montserrat-regular.woff2") format("woff2");
   font-weight: 400;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Montserrat';
-  src: url('../fonts/montserrat-500.woff2') format('woff2');
+  font-family: "Montserrat";
+  src: url("../fonts/montserrat-500.woff2") format("woff2");
   font-weight: 500;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Montserrat';
-  src: url('../fonts/montserrat-700.woff2') format('woff2');
+  font-family: "Montserrat";
+  src: url("../fonts/montserrat-700.woff2") format("woff2");
   font-weight: 700;
   font-display: swap;
 }
 
+/* =====================
+   RESET
+   ===================== */
 
+ul,
+ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
 
+/* =====================
+   BASE STYLES
+   ===================== */
 
-body {font-family: 'Montserrat', sans-serif;
+body {
+  font-family: "Montserrat", sans-serif;
   background-color: rgb(230, 252, 255);
 }
-h1 {font-family: 'Dancing Script', cursive;
+h1 {
+  font-family: "Dancing Script", cursive;
   color: blue;
 }
-h2 {font-family: 'Dancing Script', cursive;
+h2 {
+  font-family: "Dancing Script", cursive;
   color: rgb(13, 13, 124);
 }
-h3 {font-family: 'Dancing Script', cursive;
+h3 {
+  font-family: "Dancing Script", cursive;
   color: rgb(10, 10, 72);
 }
 p {
   color: rgb(0, 0, 0);
 }
 
+/* =====================
+   PICTURE STYLES
+   ===================== */
 
+#gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(8px, 1.5vw, 24px);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#gallery li {
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  border-radius: 5px;
+}
+
+#gallery img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  cursor: pointer;
+  object-position: top;
+}
+
+/*individual settings*/
+#gallery img.focus-top {
+  object-position: top;
+}
+
+#gallery img.focus-right {
+  object-position: right;
+}
+
+#gallery img.focus-left {
+  object-position: left;
+}
+
+/* =====================
+   Lightbox
+   ===================== */
+
+#lightbox {
+  border: none;
+  background: rgba(0, 0, 0, 0.9);
+  max-width: 90vw;
+  max-height: 90vh;
+  padding: 0;
+}
+
+#lightbox img {
+  max-width: 90vw;
+  max-height: 90vh;
+  object-fit: contain;
+  display: block;
+}
+
+#lightbox::backdrop {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+/* Close Button */
+.lightbox-close {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  background: none;
+  border: none;
+  color: white;
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
+  cursor: pointer;
+  opacity: 0.5;
+  transition: opacity 0.2s ease;
+}
+
+/* Navigation Buttons */
+.lightbox-prev,
+.lightbox-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: white;
+  font-size: clamp(2rem, 5vw, 4rem);
+  cursor: pointer;
+  padding: 1rem;
+  opacity: 0.5;
+  transition: opacity 0.2s ease;
+}
+
+.lightbox-prev {
+  left: 1rem;
+}
+
+.lightbox-next {
+  right: 1rem;
+}
+ /* hover effect */
+.lightbox-close:hover,
+.lightbox-prev:hover,
+.lightbox-next:hover {
+  opacity: 1;
+}
+
+/* =====================
+   ACCESSIBILITY
+   ===================== */
 
 .skip {
   position: absolute;
