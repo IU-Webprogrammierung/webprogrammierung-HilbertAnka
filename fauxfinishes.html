@@ -3,6 +3,27 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link
+      rel="preload"
+      href="fonts/montserrat-regular.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="fonts/dancing-script-700.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="fonts/dancing-script-regular.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
     <link rel="stylesheet" href="styles.css" />
     <script src="js/main.js" defer></script>
     <script src="js/i18n.js" defer></script>
@@ -14,7 +35,83 @@
     <main>
       <h1 id="faux_finishes_title"></h1>
       <p id="faux_finishes_intro"></p>
+
+      <ul id="gallery">
+        <li>
+          <img
+            src="images/small/faux-finishes/wood.webp"
+            data-large="images/large/faux-finishes/wood.webp"
+            alt="Theatrical painting imitating dark wood grain, close-up detail"
+          />
+        </li>
+        <li>
+          <img
+            src="images/small/faux-finishes/wood1.webp"
+            data-large="images/large/faux-finishes/wood1.webp"
+            alt="Two small dressers painted with dark wood imitation in the studio"
+          />
+        </li>
+       
+        <li>
+          <img
+            src="images/small/faux-finishes/momus.webp"
+            data-large="images/large/faux-finishes/momus.webp"
+            alt="Shipping container converted into a bar, lettered MOMUS, painted to look weathered and distressed in blue and silver"
+          />
+        </li>
+        <li>
+          <img
+            src="images/small/faux-finishes/rust2.webp"
+            data-large="images/large/faux-finishes/rust2.webp"
+            alt="Letter E painted green with heavy patina and rust effects"
+          />
+        </li>
+        <li>
+          <img
+            src="images/small/faux-finishes/concrete1.webp"
+            data-large="images/large/faux-finishes/concrete1.webp"
+            alt="Large decorative curved elements painted to imitate concrete, in the studio"
+          />
+        </li>
+        <li>
+          <img
+            src="images/small/faux-finishes/concrete.webp"
+            data-large="images/large/faux-finishes/concrete.webp"
+            alt=Performance shot of Elektra, singer on stage with concrete imitation set resembling an underground tunnel"
+          />
+        </li>
+
+        <li>
+          <img
+            src="images/small/faux-finishes/peter_grimes.webp"
+            data-large="images/large/faux-finishes/peter_grimes.webp"
+            alt="Performance shot of Peter Grimes, two figures in front of a small hut painted to look heavily weathered and distressed"
+          />
+        </li>
+        <li>
+          <img
+            src="images/small/faux-finishes/marble.webp"
+            data-large="images/large/faux-finishes/marble.webp"
+            alt="Wall of panels imitating white and grey marble, each containing a mask, also a large mask in the foreground"
+          />
+        </li>
+
+        <li>
+          <img
+            src="images/small/faux-finishes/barrel.webp"
+            data-large="images/large/faux-finishes/barrel.webp"
+            alt="Old fire barrel painted in silver with heavily distressed and rusted surface"
+          />
+        </li>
+      </ul>
     </main>
+
+     <dialog id="lightbox">
+        <button class="lightbox-close">✕</button>
+        <button class="lightbox-prev">‹</button>
+        <button class="lightbox-next">›</button>
+        <img id="lightbox-img" src="" alt="" />
+      </dialog>
 
     <footer></footer>
   </body>
