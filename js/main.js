@@ -33,8 +33,9 @@ let currentIndex = 0;
 // show image by index
 function showImage(index) {
   currentIndex = index;
-  lightboxImg.src = galleryImgs[index].src;
-  lightboxImg.alt = galleryImgs[index].alt;
+  const img = galleryImgs[index];
+  lightboxImg.src = img.dataset.large || img.src;
+  lightboxImg.alt = img.alt;
 }
 
 // open lightbox when a gallery image is clicked

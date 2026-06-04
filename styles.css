@@ -25,12 +25,6 @@
   font-display: swap;
 }
 
-@font-face {
-  font-family: "Montserrat";
-  src: url("../fonts/montserrat-500.woff2") format("woff2");
-  font-weight: 500;
-  font-display: swap;
-}
 
 @font-face {
   font-family: "Montserrat";
@@ -61,6 +55,7 @@ body {
 h1 {
   font-family: "Dancing Script", cursive;
   color: blue;
+    font-weight: 700;
 }
 h2 {
   font-family: "Dancing Script", cursive;

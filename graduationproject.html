@@ -3,6 +3,27 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link
+      rel="preload"
+      href="fonts/montserrat-regular.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="fonts/dancing-script-700.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="fonts/dancing-script-regular.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
     <link rel="stylesheet" href="styles.css" />
     <script src="js/main.js" defer></script>
     <script src="js/i18n.js" defer></script>
@@ -15,6 +36,58 @@
       <h1 id="graduation_project_title"></h1>
       <p id="graduation_project_intro"></p>
     </main>
+
+    <ul id="gallery">
+      <li>
+        <img
+          src="images/small/diploma.webp"
+          data-large="images/large/diploma.webp"
+          alt="Theatrical painting of a view from the stage into an abandoned ornate theater, framed by curtains"
+        />
+      </li>
+      <li>
+        <img
+          src="images/small/diploma-sketch.webp"
+          data-large="images/large/diploma-sketch.webp"
+          alt="Theatrical painting in progress, charcoal sketch on canvas photographed from above in the studio"
+        />
+      </li>
+      <li>
+        <img
+          src="images/small/diploma-inking.webp"
+          data-large="images/large/diploma-inking.webp"
+          alt="Theatrical painting in progress, inking begun on the left curtain, photographed from above in the studio"
+        />
+      </li>
+      <li>
+        <img
+          src="images/small/diploma-inking-finish.webp"
+          data-large="images/large/diploma-inking-finish.webp"
+          alt="Theatrical painting in progress, inking completed, photographed from above in the studio"
+        />
+      </li>
+      <li>
+        <img
+          src="images/small/diploma-first-colour.webp"
+          data-large="images/large/diploma-first-colour.webp"
+          alt="Theatrical painting in progress, first colors applied, with a paint cart and color pots visible, photographed from above in the studio"
+        />
+      </li>
+      <li>
+        <img
+          src="images/small/diploma-colour.webp"
+          data-large="images/large/diploma-colour.webp"
+          alt="Theatrical painting in progress, colors further developed, photographed from above in the studio"
+        />
+      </li>
+    </ul>
+
+    <dialog id="lightbox">
+      <button class="lightbox-close">✕</button>
+      <button class="lightbox-prev">‹</button>
+      <button class="lightbox-next">›</button>
+      <img id="lightbox-img" src="" alt="" />
+    </dialog>
 
     <footer></footer>
   </body>
