@@ -25,7 +25,6 @@
   font-display: swap;
 }
 
-
 @font-face {
   font-family: "Montserrat";
   src: url("../fonts/montserrat-700.woff2") format("woff2");
@@ -36,6 +35,10 @@
 /* =====================
    RESET
    ===================== */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
 
 ul,
 ol {
@@ -50,37 +53,153 @@ ol {
 
 body {
   font-family: "Montserrat", sans-serif;
-  background-color: rgb(230, 252, 255);
+  background-color: #f5f5f5;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
 }
+
+h1, h2, h3 {
+  font-family: "Dancing Script", cursive;
+  color: #646464;
+}
+
 h1 {
-  font-family: "Dancing Script", cursive;
-  color: blue;
-    font-weight: 700;
+  font-weight: 700;
 }
-h2 {
-  font-family: "Dancing Script", cursive;
-  color: rgb(13, 13, 124);
-}
-h3 {
-  font-family: "Dancing Script", cursive;
-  color: rgb(10, 10, 72);
-}
+
 p {
-  color: rgb(0, 0, 0);
+  color: #646464;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* =====================
+   HEADER
+   ===================== */
+
+header {
+  position: sticky; /* sticky header stays on top while scrolling */
+  top: 0;
+  background-color: white;
+}
+
+header ul,
+header #language-switch {
+ 
+  display: flex;
+  justify-content: center;
+}
+
+header ul li a,
+header ul li #language-switch {
+  display: block;
+  color: #646464;
+  padding: 1rem 1rem;
+}
+
+header ul li a:hover,
+header ul li #language-switch:hover {
+  background-color: #e8e7e7;
+}
+
+ul li a.active {
+  background-color: #f5f5f5;
+}
+
+/* =====================
+   Hamburger Icon / Button
+   ===================== */
+
+#menu-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 1rem;
+  margin-left: auto;
+}
+
+/* hamburger-button stripes */
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: #646464;
+  border-radius: 3px;
+  transition:
+    transform 0.3s ease,
+    opacity 0.3s ease;
+}
+
+/* transforms three bars into an X when menu is open */
+#menu-toggle.open .bar:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+#menu-toggle.open .bar:nth-child(2) {
+  opacity: 0;
+}
+
+#menu-toggle.open .bar:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+/* Navigation auf Mobile */
+@media (max-width: 767px) {
+  #menu-toggle {
+    display: flex;
+  }
+
+  #navigation-list {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  #navigation-list.open {
+    display: flex;
+  }
+}
+
+/* =====================
+   FOOTER
+   ===================== */
+
+footer ul {
+  background-color: white;
+  display: flex;
+  justify-content: center;
+}
+
+footer ul li a {
+  display: block;
+  color: #646464;
+  padding: 1rem 3rem;
+  
+}
+
+footer ul li a:hover,
+footer ul li button:hover {
+  background-color: #e8e7e7;
 }
 
 /* =====================
    PICTURE STYLES
    ===================== */
 
-   /* standard: 3 columns (desktop) */
+/* standard: 3 columns (desktop) */
 #gallery {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: clamp(8px, 1.5vw, 24px);
-  list-style: none;
-  padding: 0;
-  margin: 0;
+
 }
 
 /* 2 columns (tablet) */
@@ -108,20 +227,6 @@ p {
   height: 100%;
   object-fit: cover;
   cursor: pointer;
-  object-position: top;
-}
-
-/*individual settings*/
-#gallery img.focus-top {
-  object-position: top;
-}
-
-#gallery img.focus-right {
-  object-position: right;
-}
-
-#gallery img.focus-left {
-  object-position: left;
 }
 
 /* =====================
@@ -184,7 +289,7 @@ p {
 .lightbox-next {
   right: 1rem;
 }
- /* hover effect */
+/* hover effect */
 .lightbox-close:hover,
 .lightbox-prev:hover,
 .lightbox-next:hover {
