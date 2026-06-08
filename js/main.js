@@ -4,14 +4,34 @@
 
 //load header component and then set language
 loadComponent("header", "components/header.html").then(() => {
+ 
   //active link - highlights the current page
   const currentPage = window.location.pathname.split("/").pop();
   const links = document.querySelectorAll(".navigation-list a");
 
+  // pages that belong to the gallery section
+  const galleryPages = [
+    "practicalworks.html",
+    "graduationproject.html",
+    "sleepingbeauty.html",
+    "architecture.html",
+    "translucent.html",
+    "fauxfinishes.html"
+  ];
+
   links.forEach((link) => {
+    const linkHref = link.getAttribute("href");
+
+    //highlight exact match
     if (link.getAttribute("href") === currentPage) {
       link.classList.add("active");
     }
+
+    //highlight when on a gallery subpage
+     if (linkHref === "gallery.html" && galleryPages.includes(currentPage)) {
+    link.classList.add("active");
+  }
+
   });
 
   //hamburger-button
