@@ -67,15 +67,22 @@ h1,
 h2,
 h3 {
   font-family: "Dancing Script", cursive;
-  color: #646464;
+  color: #9b7375;
 }
 
 h1 {
   font-weight: 700;
 }
 
+h1,
+h2 {
+  font-size: clamp(2rem, 4vw, 3.5rem);
+}
+
 p {
-  color: #646464;
+  color: #6f4e4f;
+  line-height: 1.8;
+  font-size: clamp(1rem, 2vw, 1.3rem);
 }
 
 a {
@@ -240,42 +247,224 @@ footer ul li button:hover {
 }
 
 /* ===============================
-   PICTURE STYLES FOR index.xhtml
+   PICTURE STYLES and HERO FOR index.xhtml
    =============================== */
-.organic-img-1, .organic-img-2, .organic-img-3, .organic-img-4, .organic-img-5 {
-  border: 2px solid #C68E7E;
-  padding: 0.5rem;
-  width: 25rem;
-  height: 25rem;
-  margin: 3;
+
+.hero,
+.hero-2 {
+  display: flex;
+  align-items: center;
+  gap: 7rem;
+  padding: 2rem;
+  margin-top: 6rem;
 }
 
-.organic-img-1 img, .organic-img-2 img, .organic-img-3 img, .organic-img-4 img, .organic-img-5 img {
+.hero {
+  padding-left: 5%;
+}
+
+.hero-2 {
+  padding-right: 5%;
+}
+
+.hero-text,
+.hero-text-2 {
+  padding: 2rem 3rem;
+}
+
+.hero-text {
+  text-align: left;
+  padding-right: 14%;
+}
+.hero-text-2 {
+  text-align: right;
+}
+
+/* Images of index.html */
+.hero-img-1,
+.hero-img-2,
+.organic-img-3,
+.organic-img-4,
+.organic-img-5 {
+  border: 2px solid #c68e7e;
+  padding: 0.5rem;
+  flex-shrink: 0;
+}
+
+.hero-img-1,
+.hero-img-2 {
+  width: clamp(25rem, 45vw, 50rem);
+  height: clamp(25rem, 45vw, 50rem);
+}
+
+.organic-img-3,
+.organic-img-4,
+.organic-img-5 {
+  width: 25rem;
+  height: 25rem;
+}
+
+.hero-img-1 img,
+.hero-img-2 img,
+.organic-img-3 img,
+.organic-img-4 img,
+.organic-img-5 img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-.organic-img-1,
-.organic-img-1 img {
-  border-radius: 60% 40% 55% 45% / 45% 55% 40% 60%;
+.hero-img-1 {
+  margin-right: -5rem;
 }
 
-.organic-img-2, 
-.organic-img-2 img {
-  border-radius: 44% 56% 47% 53% / 49% 42% 58% 51%  ;
+.hero-img-2 {
+  margin-left: -5rem;
 }
 
-.organic-img-3, .organic-img-3 img {
-  border-radius: 37% 63% 36% 64% / 63% 37% 63% 37% ;
+/* organic forms for images */
+.hero-img-1,
+.hero-img-1 img {
+  border-radius: 61% 39% 36% 64% / 40% 54% 46% 60%;
 }
 
-.organic-img-4, .organic-img-4 img {
-  border-radius: 60% 40% 36% 64% / 53% 52% 48% 47% ;
+.hero-img-2,
+.hero-img-2 img {
+  border-radius: 44% 56% 47% 53% / 49% 42% 58% 51%;
 }
 
-.organic-img-5, .organic-img-5 img {
-  border-radius: 65% 35% 52% 48% / 37% 70% 30% 63% ;
+.organic-img-3,
+.organic-img-3 img {
+  border-radius: 37% 63% 36% 64% / 63% 37% 63% 37%;
+}
+
+.organic-img-4,
+.organic-img-4 img {
+  border-radius: 60% 40% 36% 64% / 53% 52% 48% 47%;
+}
+
+.organic-img-5,
+.organic-img-5 img {
+  border-radius: 65% 35% 52% 48% / 37% 70% 30% 63%;
+}
+
+/* =====================
+   SECTION GALLERY of index.html
+   ===================== */
+
+/* !!!! needs to be fixed !!!! */
+
+.gallery {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60vh;
+  margin-top: 30%;
+}
+
+#gallery_title {
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  font-family: "Dancing Script", cursive;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+
+  width: 40vmin;
+  height: 40vmin;
+
+  border-radius: 62% 38% 54% 46% / 53% 52% 48% 47%;
+  background-color: #bf9496;
+
+  color: white;
+}
+
+#gallery_title::before,
+#gallery_title::after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  content: "";
+}
+
+#gallery_title::before {
+  width: 110%;
+  height: 110%;
+  background-color: #e6c9cb;
+  border-radius: 48% 52% 58% 42% / 46% 57% 43% 54%;
+  z-index: -2;
+}
+
+#gallery_title::after {
+  width: 125%;
+  height: 125%;
+  background-color: #f3e3e3;
+  border-radius: 54% 46% 53% 47% / 41% 49% 51% 59%;
+  z-index: -3;
+}
+
+/* =====================
+   Scenery Painting Text
+   ===================== */
+
+.context {
+  background-color: #eae1e1d3;
+  height: 10%;
+  margin-top: 10%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.context-text {
+  text-align: center;
+  max-width: 100ch;
+  padding-bottom: 5%;
+}
+
+/* =====================
+   VIDEO-SECTION
+   ===================== */
+
+.video {
+  margin: 10% 20% 30% 30%;
+}
+
+/* =====================
+   SUBNAVIGATION of index.html
+   ===================== */
+.subnav {
+  margin-top: 20%;
+  margin-bottom: 20%;
+}
+
+.subnav ul {
+  display: flex;
+  gap: clamp(0.5rem, 5vw, 7rem);
+  justify-content: center;
+}
+
+.subnav li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.subnav a {
+  margin-top: 1rem;
+  color: #9b7375;
+  font-size: clamp(1rem, 2vw, 1.3rem);
+}
+
+.subnav li:nth-child(1) {
+  transform: translateY(-30%);
+}
+
+.subnav li:nth-child(3) {
+  transform: translateY(-30%);
 }
 
 /* =====================
