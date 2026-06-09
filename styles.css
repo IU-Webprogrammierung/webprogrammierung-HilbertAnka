@@ -95,14 +95,14 @@ header {
 header ul,
 header #language-switch {
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
 }
 
 header ul li a,
 header ul li #language-switch {
   display: block;
   color: #646464;
-  padding: 1rem 1rem;
+  padding: 1.5rem 1.5rem;
 }
 
 header ul li a:hover,
@@ -212,9 +212,9 @@ ul li a.active {
   .dropdown-gallery {
     display: flex;
     flex-direction: column;
-    position: static; 
+    position: static;
     box-shadow: none;
-    padding-left: 1rem; 
+    padding-left: 1rem;
   }
 }
 
@@ -237,6 +237,45 @@ footer ul li a {
 footer ul li a:hover,
 footer ul li button:hover {
   background-color: #e8e7e7;
+}
+
+/* ===============================
+   PICTURE STYLES FOR index.xhtml
+   =============================== */
+.organic-img-1, .organic-img-2, .organic-img-3, .organic-img-4, .organic-img-5 {
+  border: 2px solid #C68E7E;
+  padding: 0.5rem;
+  width: 25rem;
+  height: 25rem;
+  margin: 3;
+}
+
+.organic-img-1 img, .organic-img-2 img, .organic-img-3 img, .organic-img-4 img, .organic-img-5 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.organic-img-1,
+.organic-img-1 img {
+  border-radius: 60% 40% 55% 45% / 45% 55% 40% 60%;
+}
+
+.organic-img-2, 
+.organic-img-2 img {
+  border-radius: 44% 56% 47% 53% / 49% 42% 58% 51%  ;
+}
+
+.organic-img-3, .organic-img-3 img {
+  border-radius: 37% 63% 36% 64% / 63% 37% 63% 37% ;
+}
+
+.organic-img-4, .organic-img-4 img {
+  border-radius: 60% 40% 36% 64% / 53% 52% 48% 47% ;
+}
+
+.organic-img-5, .organic-img-5 img {
+  border-radius: 65% 35% 52% 48% / 37% 70% 30% 63% ;
 }
 
 /* =====================
@@ -312,6 +351,10 @@ footer ul li button:hover {
   cursor: pointer;
   opacity: 0.5;
   transition: opacity 0.2s ease;
+}
+
+.lightbox-close:focus {
+  outline: none;
 }
 
 /* Navigation Buttons */

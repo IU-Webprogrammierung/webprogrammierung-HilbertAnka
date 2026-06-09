@@ -5,6 +5,7 @@ let currentLanguage = "en";
 async function loadLanguage(lang) {
 
     currentLanguage = lang;
+    document.documentElement.lang = lang;
 
     const response = await fetch(`lang/${lang}.json`); // load JSON
     const translation = await response.json(); // convert JSON to JavaScript -> text becomes an object
@@ -28,6 +29,7 @@ async function loadLanguage(lang) {
 // language switch function
 function setLanguage(lang) {
     localStorage.setItem("language", lang)
+    document.documentElement.lang = lang;
     loadLanguage(lang);
 }
 
