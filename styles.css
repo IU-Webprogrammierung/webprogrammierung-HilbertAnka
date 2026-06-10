@@ -49,13 +49,18 @@ ol {
   margin: 0;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 /* =====================
    BASE STYLES
    ===================== */
 
 body {
   font-family: "Montserrat", sans-serif;
-  background-color: #f5f5f5;
+  background-color: white;
   margin: 0;
   padding: 0;
   display: grid;
@@ -89,6 +94,10 @@ a {
   text-decoration: none;
 }
 
+main {
+  background-color: #f5f5f5;
+}
+
 /* =====================
    HEADER
    ===================== */
@@ -97,6 +106,7 @@ header {
   position: sticky; /* sticky header stays on top while scrolling */
   top: 0;
   background-color: white;
+  z-index: 100;
 }
 
 header ul,
@@ -254,17 +264,18 @@ footer ul li button:hover {
 .hero-2 {
   display: flex;
   align-items: center;
-  gap: 7rem;
-  padding: 2rem;
   margin-top: 6rem;
+  overflow: hidden;
 }
 
 .hero {
-  padding-left: 5%;
+  padding-left: clamp(1rem, 5%, 5%);
+  gap: clamp(2rem, 5vw, 6rem);
 }
 
 .hero-2 {
-  padding-right: 5%;
+  padding-right: clamp(1rem, 5%, 5%);
+  gap: clamp(1rem, 3vw, 3rem);
 }
 
 .hero-text,
@@ -274,10 +285,11 @@ footer ul li button:hover {
 
 .hero-text {
   text-align: left;
-  padding-right: 14%;
+  padding-right: clamp(1rem, 7%, 14%);
 }
 .hero-text-2 {
   text-align: right;
+  padding-left: clamp(0.5rem, 3%, 5%);
 }
 
 /* Images of index.html */
@@ -295,13 +307,6 @@ footer ul li button:hover {
 .hero-img-2 {
   width: clamp(25rem, 45vw, 50rem);
   height: clamp(25rem, 45vw, 50rem);
-}
-
-.organic-img-3,
-.organic-img-4,
-.organic-img-5 {
-  width: 25rem;
-  height: 25rem;
 }
 
 .hero-img-1 img,
@@ -333,33 +338,53 @@ footer ul li button:hover {
   border-radius: 44% 56% 47% 53% / 49% 42% 58% 51%;
 }
 
-.organic-img-3,
-.organic-img-3 img {
-  border-radius: 37% 63% 36% 64% / 63% 37% 63% 37%;
-}
+@media (max-width: 767px) {
+  .hero,
+  .hero-2 {
+    gap: 2rem;
+    margin-top: 2rem;
+    padding: 1rem;
+  }
 
-.organic-img-4,
-.organic-img-4 img {
-  border-radius: 60% 40% 36% 64% / 53% 52% 48% 47%;
-}
+  .hero {
+    flex-direction: column-reverse;
+  }
 
-.organic-img-5,
-.organic-img-5 img {
-  border-radius: 65% 35% 52% 48% / 37% 70% 30% 63%;
+  .hero-2 {
+    flex-direction: column;
+  }
+
+  .hero-img-1,
+  .hero-img-2 {
+    margin-right: 0;
+    margin-left: 0;
+    width: clamp(15rem, 80vw, 25rem);
+    height: clamp(15rem, 80vw, 25rem);
+  }
+
+  .hero-text,
+  .hero-text-2 {
+    text-align: justify;
+    hyphens: auto;
+    padding: 1rem;
+    padding-right: clamp(1rem, 7%, 14%);
+    padding-left: clamp(1rem, 7%, 14%);
+  }
 }
 
 /* =====================
    SECTION GALLERY of index.html
    ===================== */
 
-/* !!!! needs to be fixed !!!! */
-
 .gallery {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 60vh;
-  margin-top: 30%;
+  margin-top: 6rem;
+  margin-bottom: 6rem;
+  position: relative;
+  z-index: 1;
 }
 
 #gallery_title {
@@ -371,10 +396,10 @@ footer ul li button:hover {
   align-items: center;
   position: relative;
 
-  width: 40vmin;
-  height: 40vmin;
+  width: 35vmin;
+  height: 35vmin;
 
-  border-radius: 62% 38% 54% 46% / 53% 52% 48% 47%;
+  border-radius: 60% 40% 53% 47% / 54% 57% 43% 46%;
   background-color: #bf9496;
 
   color: white;
@@ -393,8 +418,8 @@ footer ul li button:hover {
   width: 110%;
   height: 110%;
   background-color: #e6c9cb;
-  border-radius: 48% 52% 58% 42% / 46% 57% 43% 54%;
-  z-index: -2;
+  border-radius: 56% 44% 56% 44% / 49% 52% 48% 51%;
+  z-index: -1;
 }
 
 #gallery_title::after {
@@ -402,7 +427,7 @@ footer ul li button:hover {
   height: 125%;
   background-color: #f3e3e3;
   border-radius: 54% 46% 53% 47% / 41% 49% 51% 59%;
-  z-index: -3;
+  z-index: -2;
 }
 
 /* =====================
@@ -411,39 +436,149 @@ footer ul li button:hover {
 
 .context {
   background-color: #eae1e1d3;
-  height: 10%;
-  margin-top: 10%;
-
+  margin-top: clamp(3rem, 6vw, 6rem);
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 3rem clamp(1rem, 5%, 3rem);
+
+  outline: 4px solid #eae1e1d3;
+  outline-offset: 0.5rem;
 }
 
 .context-text {
-  text-align: center;
-  max-width: 100ch;
-  padding-bottom: 5%;
+  text-align: justify;
+  hyphens: auto;
+  padding-top: 1.5rem;
+  padding-bottom: 3.5rem;
+  padding-left: clamp(1rem, 10%, 10rem);
+  padding-right: clamp(1rem, 10%, 10rem);
 }
 
 /* =====================
    VIDEO-SECTION
    ===================== */
-
 .video {
-  margin: 10% 20% 30% 30%;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding-left: clamp(1rem, 10%, 10rem);
+  padding-right: clamp(1rem, 10%, 10rem);
+  padding-bottom: 3rem;
+  padding-top: 10rem;
+}
+
+.organic-video {
+  border-radius: 44% 56% 55% 45% / 49% 47% 53% 51%;
+  border: 2px solid #c68e7e;
+  padding: 0.5rem;
+  flex-shrink: 0;
+  width: clamp(20rem, 40vw, 45rem);
+  aspect-ratio: 16 / 14;
+  overflow: hidden;
+}
+
+.organic-video img {
+  border-radius: 44% 56% 55% 45% / 49% 47% 53% 51%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.video-thumbnail {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  position: relative;
+}
+
+/* Play-Button */
+.video-thumbnail::after {
+  content: "▶";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 3rem;
+  opacity: 0.8;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  transition: opacity 0.2s ease;
+}
+
+.video-thumbnail:hover::after {
+  opacity: 1;
+}
+
+/* text next to video */
+
+.video p {
+  text-align: right;
+  align-self: flex-end;
+  margin-bottom: 6rem;
+}
+
+@media (max-width: 767px) {
+  .video {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* Video Lightbox */
+
+#video-lightbox {
+  border: none;
+  background: rgba(0, 0, 0, 0.9);
+  padding: 2rem;
+  max-width: 95vw;
+}
+
+#video-lightbox::backdrop {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+#video-lightbox iframe {
+  width: clamp(300px, 80vw, 900px);
+  height: clamp(200px, 45vw, 500px);
+  display: block;
+}
+
+.video-close {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  background: none;
+  border: none;
+  color: white;
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
+  cursor: pointer;
+  opacity: 0.5;
+  transition: opacity 0.2s ease;
+}
+
+.video-close:hover {
+  opacity: 1;
 }
 
 /* =====================
    SUBNAVIGATION of index.html
    ===================== */
+
 .subnav {
-  margin-top: 20%;
-  margin-bottom: 20%;
+  margin-block: clamp(4rem, 8vw, 8rem);
+  padding-bottom: clamp(4rem, 10vw, 12rem);
+  padding-inline: 1rem;
 }
 
 .subnav ul {
-  display: flex;
-  gap: clamp(0.5rem, 5vw, 7rem);
+  display: grid;
+  grid-template-columns: repeat(
+    3,
+    1fr
+  ); /* grid-system with 3 columns for each navigation */
+  gap: clamp(0rem, 2vw, 3rem);
   justify-content: center;
 }
 
@@ -459,12 +594,73 @@ footer ul li button:hover {
   font-size: clamp(1rem, 2vw, 1.3rem);
 }
 
+/* smaller gap between elements */
 .subnav li:nth-child(1) {
-  transform: translateY(-30%);
+  margin-right: -2rem;
+}
+/* move element down */
+.subnav li:nth-child(2) {
+  margin-top: clamp(8rem, 15vw, 18rem);
 }
 
+/* smaller gap between elements */
 .subnav li:nth-child(3) {
-  transform: translateY(-30%);
+  margin-left: -2rem;
+}
+
+.organic-img-3,
+.organic-img-3 img {
+  border-radius: 44% 56% 59% 41% / 49% 47% 53% 51% ;
+}
+
+.organic-img-4,
+.organic-img-4 img {
+  border-radius: 31% 69% 47% 53% / 44% 47% 53% 56% ;
+}
+
+.organic-img-5,
+.organic-img-5 img {
+  border-radius: 53% 47% 54% 46% / 40% 56% 44% 60% ;
+}
+
+.organic-img-3,
+.organic-img-4,
+.organic-img-5 {
+  width: clamp(12rem, 20vw, 25rem);
+  height: clamp(12rem, 20vw, 25rem);
+}
+
+.subnav a {
+  font-size: clamp(1rem, 2vw, 1.5rem);
+
+}
+
+/* mobile */
+
+@media (max-width: 767px) {
+  .subnav ul {
+    grid-template-columns: 1fr; /* change to 1 column */
+  }
+
+  .subnav li:nth-child(1) {
+    margin-right: 0;
+  }
+
+  .subnav li:nth-child(2) {
+    margin-top: 0;
+  }
+
+  .subnav li:nth-child(3) {
+    margin-left: 0;
+  }
+
+  /* organic forms for images */
+  .organic-img-3,
+  .organic-img-4,
+  .organic-img-5 {
+    width: clamp(12rem, 40vw, 20rem);
+    height: clamp(12rem, 40vw, 20rem);
+  }
 }
 
 /* =====================

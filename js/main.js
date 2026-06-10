@@ -4,7 +4,6 @@
 
 //load header component and then set language
 loadComponent("header", "components/header.html").then(() => {
- 
   //active link - highlights the current page
   const currentPage = window.location.pathname.split("/").pop();
   const links = document.querySelectorAll(".navigation-list a");
@@ -16,7 +15,7 @@ loadComponent("header", "components/header.html").then(() => {
     "sleepingbeauty.html",
     "architecture.html",
     "translucent.html",
-    "fauxfinishes.html"
+    "fauxfinishes.html",
   ];
 
   links.forEach((link) => {
@@ -28,10 +27,9 @@ loadComponent("header", "components/header.html").then(() => {
     }
 
     //highlight when on a gallery subpage
-     if (linkHref === "gallery.html" && galleryPages.includes(currentPage)) {
-    link.classList.add("active");
-  }
-
+    if (linkHref === "gallery.html" && galleryPages.includes(currentPage)) {
+      link.classList.add("active");
+    }
   });
 
   //hamburger-button
@@ -131,3 +129,30 @@ if (lightbox && gallery) {
     }
   });
 }
+
+// ==============================
+// Video Lightbox
+// ==============================
+
+// store references to lightbox elements
+const videoLightbox = document.getElementById("video-lightbox");
+const videoIframe = document.getElementById("video-iframe");
+const videoOpen = document.getElementById("video-open");
+const VIDEO_URL = "https://www.youtube-nocookie.com/embed/8BNDVy-Xemw";
+
+// open video lightbox
+videoOpen.addEventListener("click", () => {
+  videoIframe.src = VIDEO_URL; // video load
+  videoLightbox.showModal();
+});
+
+// close video lightbox
+videoLightbox.addEventListener("click", (e) => {
+  if (
+    e.target === videoLightbox ||
+    e.target.classList.contains("video-close")
+  ) {
+    videoIframe.src = ""; // video stop when lightbox closed
+    videoLightbox.close();
+  }
+});

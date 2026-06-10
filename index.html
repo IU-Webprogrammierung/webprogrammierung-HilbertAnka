@@ -56,29 +56,42 @@
       </section>
 
       <section class="video">
-        <video width="320" height="240" controls>
-          <source src="movie.mp4" type="video/mp4" />
-          <source src="movie.ogg" type="video/ogg" />
-          Your browser does not support the video tag.
-        </video>
+        <button class="video-thumbnail" id="video-open">
+          <figure class="organic-video">
+            <img
+              src="https://img.youtube.com/vi/8BNDVy-Xemw/maxresdefault.jpg"
+              alt="Behind-the-scenes preview image of stage set production for the ballet Sleeping Beauty"
+            />
+          </figure>
+        </button>
 
         <p id="video-description"></p>
       </section>
 
+      <dialog id="video-lightbox">
+        <button class="video-close">✕</button>
+        <iframe
+          id="video-iframe"
+          src=""
+          title="Behind-the-scenes preview image of stage set production for the ballet Sleeping Beauty"
+          allowfullscreen
+          width="900"
+          height="500"
+        ></iframe>
+      </dialog>
+
       <section class="subnav">
         <ul>
           <li>
-           
             <figure class="organic-img-3">
               <img
                 src="images/large/other/brushes.webp"
                 alt="Paint brushes lying on the paint-covered floor of a theatre paint studio."
               />
             </figure>
-             <a id="studio_insights_title" href="studioinsights.html"></a>
+            <a id="studio_insights_title" href="studioinsights.html"></a>
           </li>
           <li>
-           
             <figure class="organic-img-4">
               <img
                 src="images/large/other/fromabove.webp"
@@ -88,7 +101,6 @@
             <a id="about_me_title" href="aboutme.html"></a>
           </li>
           <li>
-            
             <figure class="organic-img-5">
               <img
                 src="images/large/other/color.webp"
