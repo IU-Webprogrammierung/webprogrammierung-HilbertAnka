@@ -72,7 +72,7 @@ h1,
 h2,
 h3 {
   font-family: "Dancing Script", cursive;
-  color: #9b7375;
+  color: #7a5254;;
 }
 
 h1 {
@@ -85,7 +85,7 @@ h2 {
 }
 
 p {
-  color: #6f4e4f;
+  color: #5a3d3e;
   line-height: 1.8;
   font-size: clamp(1rem, 2vw, 1.3rem);
 }
@@ -96,6 +96,7 @@ a {
 
 main {
   background-color: #f5f5f5;
+  overflow-x: hidden;
 }
 
 /* =====================
@@ -400,7 +401,7 @@ footer ul li button:hover {
   height: 35vmin;
 
   border-radius: 60% 40% 53% 47% / 54% 57% 43% 46%;
-  background-color: #bf9496;
+  background-color: #8f6062;
 
   color: white;
 }
@@ -417,7 +418,7 @@ footer ul li button:hover {
 #gallery_title::before {
   width: 110%;
   height: 110%;
-  background-color: #e6c9cb;
+  background-color: #be9597;
   border-radius: 56% 44% 56% 44% / 49% 52% 48% 51%;
   z-index: -1;
 }
@@ -425,7 +426,7 @@ footer ul li button:hover {
 #gallery_title::after {
   width: 125%;
   height: 125%;
-  background-color: #f3e3e3;
+  background-color: #dabebf;
   border-radius: 54% 46% 53% 47% / 41% 49% 51% 59%;
   z-index: -2;
 }
@@ -590,7 +591,7 @@ footer ul li button:hover {
 
 .subnav a {
   margin-top: 1rem;
-  color: #9b7375;
+  color: #7a5254;;
   font-size: clamp(1rem, 2vw, 1.3rem);
 }
 
@@ -610,17 +611,17 @@ footer ul li button:hover {
 
 .organic-img-3,
 .organic-img-3 img {
-  border-radius: 44% 56% 59% 41% / 49% 47% 53% 51% ;
+  border-radius: 44% 56% 59% 41% / 49% 47% 53% 51%;
 }
 
 .organic-img-4,
 .organic-img-4 img {
-  border-radius: 31% 69% 47% 53% / 44% 47% 53% 56% ;
+  border-radius: 31% 69% 47% 53% / 44% 47% 53% 56%;
 }
 
 .organic-img-5,
 .organic-img-5 img {
-  border-radius: 53% 47% 54% 46% / 40% 56% 44% 60% ;
+  border-radius: 53% 47% 54% 46% / 40% 56% 44% 60%;
 }
 
 .organic-img-3,
@@ -632,7 +633,6 @@ footer ul li button:hover {
 
 .subnav a {
   font-size: clamp(1rem, 2vw, 1.5rem);
-
 }
 
 /* mobile */
