@@ -61,11 +61,11 @@ async function loadComponent(selector, file) {
 
 // store references to lightbox elements
 const lightbox = document.getElementById("lightbox");
-const gallery = document.getElementById("gallery");
+const gallery = document.querySelector("#gallery, #studio-insights-gallery");
 
 if (lightbox && gallery) {
   const lightboxImg = document.getElementById("lightbox-img");
-  const galleryImgs = document.querySelectorAll("#gallery img");
+  const galleryImgs = gallery.querySelectorAll("img");
 
   // track which image is currently shown
   let currentIndex = 0;
@@ -79,7 +79,7 @@ if (lightbox && gallery) {
   }
 
   // open lightbox when a gallery image is clicked
-  document.getElementById("gallery").addEventListener("click", (e) => {
+  gallery.addEventListener("click", (e) => {
     if (e.target.tagName === "IMG") {
       // Find which image was clicked
       const clickedIndex = Array.from(galleryImgs).indexOf(e.target);
