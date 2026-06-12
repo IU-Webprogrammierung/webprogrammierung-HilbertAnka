@@ -751,6 +751,26 @@ footer ul li button:hover {
 }
 
 /* ==========================================================
+   Photo Credits
+   ========================================================== */
+
+#lightbox figcaption, .credited-img {
+  position: relative;
+  margin: 0;
+}
+
+#lightbox figcaption, .credited-img figcaption {
+  position: absolute;
+  bottom: 0.5rem;
+  right: 0.5rem;
+  color: white;
+  font-size: 0.75rem;
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+}
+
+/* ==========================================================
    Lightbox
    ========================================================== */
 
@@ -963,6 +983,67 @@ footer ul li button:hover {
   padding-left: clamp(1rem, 10%, 10rem);
   padding-right: clamp(1rem, 10%, 10rem);
   width: min(120ch, 100%);
+}
+
+
+.contact-form {
+  background-color: white;
+  padding: clamp(2rem, 5vw, 4rem);
+  border-radius: 12px;
+  max-width: min(37rem, 80%);
+  margin: 4rem auto;
+}
+
+.contact-form fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.contact-form label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: #6f4e4f;
+  grid-column: auto;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 0.75rem;
+  border: 1.5px solid #ddd;
+  border-radius: 6px;
+  font-size: 1rem;
+  grid-column: auto;
+}
+
+#message {
+  grid-column: 1 / -1; /* span both columns */
+}
+
+.contact-form button {
+  grid-column: 1 / -1;
+  padding: 1rem;
+  background-color: #c68e7e;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.contact-form button:hover {
+  background-color: #b87968;
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+  .contact-form fieldset {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* ==========================================================

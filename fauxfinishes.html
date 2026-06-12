@@ -86,23 +86,31 @@
           />
         </li>
         <li>
+          <figure class="credited-img">
           <img
             src="images/small/faux-finishes/concrete.webp"
             data-large="images/large/faux-finishes/concrete.webp"
+            data-credit="© Lutz Edelhoff"
             alt="Performance shot of Elektra, singer on stage with concrete imitation set resembling an underground tunnel"
             width="800"
             height="800"
           />
+           <figcaption>© Lutz Edelhoff</figcaption>
+          </figure>
         </li>
 
         <li>
+          <figure class="credited-img">
           <img
             src="images/small/faux-finishes/peter_grimes.webp"
             data-large="images/large/faux-finishes/peter_grimes.webp"
+            data-credit="© Lutz Edelhoff"
             alt="Performance shot of Peter Grimes, two figures in front of a small hut painted to look heavily weathered and distressed"
             width="800"
             height="800"
           />
+            <figcaption>© Lutz Edelhoff</figcaption>
+          </figure>
         </li>
         <li>
           <img
@@ -126,12 +134,15 @@
       </ul>
     </main>
 
-    <dialog id="lightbox">
-      <button class="lightbox-close">✕</button>
-      <button class="lightbox-prev">‹</button>
-      <button class="lightbox-next">›</button>
-      <img id="lightbox-img" src="" alt="" />
-    </dialog>
+  <dialog id="lightbox">
+        <button class="lightbox-close">✕</button>
+        <button class="lightbox-prev">‹</button>
+        <button class="lightbox-next">›</button>
+        <figure>
+        <img id="lightbox-img" src="" alt="" />
+        <figcaption id="lightbox-credit"></figcaption>
+        </figure>
+      </dialog>
 
     <footer></footer>
   </body>

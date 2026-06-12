@@ -12,12 +12,36 @@
     <header></header>
 
     <main>
-      <article class="contact-text">
-      <h1 id="contact_title"></h1>
-      <p id="contact_intro1"></p>
-      <p id="contact_intro2"></p>
-      </article>
+      <section class="contact-section">
+        <article class="contact-text">
+          <h1 id="contact_title"></h1>
+          <p id="contact_intro1"></p>
+          <p id="contact_intro2"></p>
+        </article>
+
+        <section id="contact-form-section">
+        <form class="contact-form" id="contact-form">
+          <fieldset>
+            <label for="first-name" id="label_first_name"></label>
+            <input type="text" id="first-name" name="first-name" required />
+
+            <label for="last-name" id="label_last_name"></label>
+            <input type="text" id="last-name" name="last-name" required />
+
+            <label for="email" id="label_email"></label>
+            <input type="email" id="email" name="email" required />
+
+            <label for="message" id="label_message"></label>
+            <textarea id="message" name="message" rows="8" required></textarea>
+
+            <button type="submit" id="contact_button">Send</button>
+          </fieldset>
+        </form>
+        </section>
+      </section>
     </main>
+
+    <section class="contact-formular"></section>
 
     <footer></footer>
   </body>

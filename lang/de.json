@@ -68,7 +68,12 @@
 
   "contact_title": "Kontakt",
   "contact_intro1": "Ich freue mich immer über neue Kontakte, spannende Projekte und kreative Zusammenarbeit.",
-  "contact_intro2": "  Wenn du Fragen hast, gemeinsam an etwas arbeiten möchtest oder einfach Hallo sagen willst – schreib mir gerne.",
+  "contact_intro2": "Wenn du Fragen hast, gemeinsam an etwas arbeiten möchtest oder einfach Hallo sagen willst – schreib mir gerne.",
+  "label_first_name": "Vorname",
+  "label_last_name": "Nachname",
+  "label_email": "E-mail",
+  "label_message": "Nachricht",
+  "contact_button": "Absenden",
 
   "footer_imprint": "Impressum",
   "footer_privacy_policy": "Datenschutz",

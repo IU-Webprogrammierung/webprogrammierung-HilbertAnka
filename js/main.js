@@ -76,6 +76,10 @@ if (lightbox && gallery) {
     const img = galleryImgs[index];
     lightboxImg.src = img.dataset.large || img.src;
     lightboxImg.alt = img.alt;
+
+    // Show credit if available
+    const credit = document.getElementById("lightbox-credit");
+    credit.textContent = img.dataset.credit || "";
   }
 
   // open lightbox when a gallery image is clicked

@@ -69,6 +69,11 @@
   "contact_title": "Contact",
   "contact_intro1": "I’m always happy to connect, take on new projects and engage in creative collaboration.",
   "contact_intro2": "If you have any questions, are interested in working together, or simply want to say hello—feel free to get in touch.",
+   "label_first_name": "First Name",
+  "label_last_name": "Last Name",
+  "label_email": "Email",
+  "label_message": "Message",
+  "contact_button": "Send",
 
   "footer_imprint": "Imprint",
   "footer_privacy_policy": "Privacy Policy",
