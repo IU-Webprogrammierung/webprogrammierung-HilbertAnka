@@ -1,6 +1,6 @@
-/* =====================
+/* ==========================================================
    FONTS
-   ===================== */
+   ========================================================== */
 
 /* Dancing Script */
 @font-face {
@@ -32,9 +32,9 @@
   font-display: swap;
 }
 
-/* =====================
+/* ==========================================================
    RESET
-   ===================== */
+   ========================================================== */
 
 *,
 *::before,
@@ -54,9 +54,9 @@ img {
   height: auto;
 }
 
-/* =====================
+/* ==========================================================
    BASE STYLES
-   ===================== */
+   ========================================================== */
 
 body {
   font-family: "Montserrat", sans-serif;
@@ -69,9 +69,8 @@ body {
 }
 
 h1,
-h2,
-h3 {
-  font-family: "Dancing Script", cursive;
+h2 {
+  font-family: "Dancing Script";
   color: #7a5254;
 }
 
@@ -81,7 +80,14 @@ h1 {
 
 h1,
 h2 {
+  font-family: "Dancing Script", cursive;
   font-size: clamp(2rem, 4vw, 3.5rem);
+}
+
+h3 {
+  font-family: "Dancing Script";
+  color: #8a6365;
+  font-size: clamp(1.8rem, 3.5vw, 2.8rem);
 }
 
 p {
@@ -99,9 +105,9 @@ main {
   overflow-x: hidden;
 }
 
-/* =====================
+/* ==========================================================
    HEADER
-   ===================== */
+   ========================================================== */
 
 header {
   position: sticky; /* sticky header stays on top while scrolling */
@@ -132,9 +138,9 @@ ul li a.active {
   background-color: #f4edea;
 }
 
-/* =====================
+/* ==========================================================
    Hamburger Icon / Button
-   ===================== */
+   ========================================================== */
 
 #menu-toggle {
   display: none;
@@ -172,7 +178,7 @@ ul li a.active {
   transform: translateY(-8px) rotate(-45deg);
 }
 
-/* Navigation auf Mobile */
+/* navigation (mobile) */
 @media (max-width: 767px) {
   #menu-toggle {
     display: flex;
@@ -189,9 +195,9 @@ ul li a.active {
   }
 }
 
-/* =====================
+/* ==========================================================
    Dropdown-Gallery
-   ===================== */
+   ========================================================== */
 
 .has-dropdown-gallery {
   position: relative;
@@ -236,9 +242,9 @@ ul li a.active {
   }
 }
 
-/* =====================
+/* ==========================================================
    FOOTER
-   ===================== */
+   ========================================================== */
 
 footer ul {
   background-color: white;
@@ -257,15 +263,15 @@ footer ul li button:hover {
   background-color: #e3d7d1;
 }
 
-/* ===============================
+/* ==========================================================
    PICTURE STYLES and HERO FOR index.xhtml
-   =============================== */
+   ========================================================== */
 
 .hero,
 .hero-2 {
   display: flex;
   align-items: center;
-  margin-top: 6rem;
+  margin-top: clamp(3rem, 6vw, 6rem);
   overflow: hidden;
 }
 
@@ -373,22 +379,22 @@ footer ul li button:hover {
   }
 }
 
-/* =====================
+/* ==========================================================
    SECTION GALLERY of index.html
-   ===================== */
+   ========================================================== */
 
 .gallery-nav {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 60vh;
-  margin-top: 6rem;
-  margin-bottom: 6rem;
+  margin-top: clamp(3rem, 6vw, 6rem);
+  margin-bottom: clamp(3rem, 6vw, 6rem);
   position: relative;
   z-index: 1;
 }
 
-#gallery_title {
+#gallery_title2 {
   font-size: clamp(2rem, 4vw, 3.5rem);
   font-family: "Dancing Script", cursive;
 
@@ -406,8 +412,8 @@ footer ul li button:hover {
   color: white;
 }
 
-#gallery_title::before,
-#gallery_title::after {
+#gallery_title2::before,
+#gallery_title2::after {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -415,7 +421,7 @@ footer ul li button:hover {
   content: "";
 }
 
-#gallery_title::before {
+#gallery_title2::before {
   width: 110%;
   height: 110%;
   background-color: #be9597;
@@ -423,7 +429,7 @@ footer ul li button:hover {
   z-index: -1;
 }
 
-#gallery_title::after {
+#gallery_title2::after {
   width: 125%;
   height: 125%;
   background-color: #dabebf;
@@ -431,9 +437,9 @@ footer ul li button:hover {
   z-index: -2;
 }
 
-/* =====================
-   Scenery Painting Text
-   ===================== */
+/* ==========================================================
+   "Scenery Painting"-Text of index.html
+   ========================================================== */
 
 .context {
   background-color: #eae1e1d3;
@@ -456,9 +462,9 @@ footer ul li button:hover {
   padding-right: clamp(1rem, 10%, 10rem);
 }
 
-/* =====================
-   VIDEO-SECTION
-   ===================== */
+/* ==========================================================
+   VIDEO-SECTION of index.html
+   ========================================================== */
 .video {
   display: flex;
   align-items: center;
@@ -517,7 +523,7 @@ footer ul li button:hover {
 .video p {
   text-align: right;
   align-self: flex-end;
-  margin-bottom: 6rem;
+  margin-bottom: clamp(3rem, 6vw, 6rem);
 }
 
 @media (max-width: 767px) {
@@ -527,7 +533,9 @@ footer ul li button:hover {
   }
 }
 
-/* Video Lightbox */
+/* ==========================================================
+   Video-Lightbox (index.html)
+   ========================================================== */
 
 #video-lightbox {
   border: none;
@@ -563,9 +571,9 @@ footer ul li button:hover {
   opacity: 1;
 }
 
-/* =====================
-   SUBNAVIGATION of index.html
-   ===================== */
+/* ==========================================================
+   Subnavigation of index.html
+   ========================================================== */
 
 .subnav {
   margin-block: clamp(4rem, 8vw, 8rem);
@@ -663,32 +671,73 @@ footer ul li button:hover {
   }
 }
 
-/* =====================
+/* ==========================================================
+   GALLERY (gallery.html)
+   ========================================================== */
+
+.gallery-text,
+.gallery-text-subpage {
+  text-align: justify;
+  hyphens: auto;
+  margin-inline: auto;
+  padding-top: clamp(0rem, 0.75vw, 1.5rem);
+  padding-bottom: clamp(0rem, 0.5vw, 1rem);
+  padding-left: clamp(1rem, 10%, 10rem);
+  padding-right: clamp(1rem, 10%, 10rem);
+  width: min(125ch, 100%);
+}
+
+.gallery-text-subpage {
+  margin-top: clamp(1rem, 2.5vw, 4rem);
+}
+
+.gallery-abstract ul,
+#gallery {
+  margin-top: clamp(2rem, 3vw, 4rem);
+  margin-bottom: clamp(3rem, 6vw, 6rem);
+  margin-inline: clamp(1rem, 4vw, 6rem);
+}
+
+#gallery-abstract-list img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ==========================================================
    PICTURE STYLES
-   ===================== */
+   ========================================================== */
 
 /* standard: 3 columns (desktop) */
-#gallery {
+#gallery,
+#gallery-abstract-list {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: clamp(8px, 1.5vw, 24px);
+  gap: clamp(2rem, 1.5vw, 6rem);
 }
 
 /* 2 columns (tablet) */
 @media (max-width: 1023px) {
-  #gallery {
+  #gallery,
+  #gallery-abstract-list {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
 /* 1 column (smartphone) */
 @media (max-width: 767px) {
-  #gallery {
+  #gallery,
+  #gallery-abstract-list {
     grid-template-columns: 1fr;
+  }
+  .gallery-abstract ul,
+  #gallery {
+    margin-inline: 3rem;
   }
 }
 
-#gallery li {
+#gallery li,
+#gallery-abstract-list li {
   aspect-ratio: 1 / 1;
   overflow: hidden;
   border-radius: 5px;
@@ -701,9 +750,9 @@ footer ul li button:hover {
   cursor: pointer;
 }
 
-/* =====================
+/* ==========================================================
    Lightbox
-   ===================== */
+   ========================================================== */
 
 #lightbox {
   border: none;
@@ -772,9 +821,9 @@ footer ul li button:hover {
   opacity: 1;
 }
 
-/* =====================
-   Studio Insights
-   ===================== */
+/* ==========================================================
+   STUDIO INSIGHTS (studioinsights.html)
+   ========================================================== */
 
 .studio-insights-intro,
 .studio-insights article {
@@ -796,18 +845,16 @@ footer ul li button:hover {
   background-color: #f6efeb;
   padding: clamp(0.8rem, 2vw, 3rem) clamp(1rem, 2.5vw, 4rem)
     clamp(1rem, 2.5vw, 4rem);
-
-    
 }
 
 .studio-insights {
   padding: 2rem clamp(1rem, 3vw, 4rem);
-  background-color: #f3e7e2;
 }
 
 .studio-insights ul {
   display: flex;
   margin-top: clamp(3rem, 6vw, 6rem);
+  margin-bottom: clamp(3rem, 6vw, 6rem);
   flex-direction: column;
   gap: clamp(2rem, 4vw, 6rem);
 }
@@ -846,50 +893,96 @@ footer ul li button:hover {
   }
 }
 
-
-/* =====================
-   About Me
-   ===================== */
-
-
+/* ==========================================================
+   ABOUT ME (aboutme.html)
+   ========================================================== */
 
 .organic-img-1 {
-   margin-top: clamp(4rem, 8vw, 8rem);
- margin-inline: auto;
+  margin-top: clamp(4rem, 8vw, 8rem);
+  margin-inline: auto;
   border: 2px solid #c68e7e;
   padding: 0.5rem;
   flex-shrink: 0;
-    border-radius: 63% 37% 44% 56% / 50% 52% 48% 50%;
+  border-radius: 63% 37% 44% 56% / 50% 52% 48% 50%;
   width: clamp(20rem, 40vw, 40rem);
-  height:  clamp(20rem, 40vw, 40rem);
- 
- 
+  height: clamp(20rem, 40vw, 40rem);
 }
 
 .organic-img-1 img {
-     width: 100%;
+  width: 100%;
   height: 100%;
   object-fit: cover;
-    border-radius: 63% 37% 44% 56% / 50% 52% 48% 50%;
-   
+  border-radius: 63% 37% 44% 56% / 50% 52% 48% 50%;
 }
 
-.about-me-text, .about-me-cv  {
-    text-align: justify;
+.about-me-text,
+.about-me-cv {
+  text-align: justify;
   hyphens: auto;
+  margin-inline: auto;
   padding-top: 1.5rem;
-  padding-bottom: 3.5rem;
+  padding-bottom: clamp(1rem, 2vw, 3rem);
   padding-left: clamp(1rem, 10%, 10rem);
   padding-right: clamp(1rem, 10%, 10rem);
-
+  width: min(125ch, 100%);
 }
 
+.about-me-cv {
+  margin-bottom: clamp(3rem, 6vw, 6rem);
+}
 
+.about-me-cv li {
+  margin-block: 2rem;
+  list-style-type: disc;
+  color: #5a3d3e;
+  line-height: 1.8;
+  font-size: clamp(1rem, 2vw, 1.3rem);
+}
 
+#about_me_title2,
+#work-experience,
+#education {
+  margin-bottom: clamp(3rem, 6vw, 6rem);
+  padding-bottom: clamp(2rem, 3vw, 4rem);
+  border-bottom: 6px solid rgba(255, 255, 255, 0.3);
+}
 
-/* =====================
+#about_me_title4 {
+  margin-top: clamp(3rem, 6vw, 6rem);
+}
+
+/* ==========================================================
+   CONTACT (contact.html)
+   ========================================================== */
+.contact-text {
+  text-align: justify;
+  hyphens: auto;
+  margin-inline: auto;
+  margin-block: clamp(4rem, 8vw, 8rem);
+
+  padding-left: clamp(1rem, 10%, 10rem);
+  padding-right: clamp(1rem, 10%, 10rem);
+  width: min(120ch, 100%);
+}
+
+/* ==========================================================
+   IMPRINT & POLICY (imprintpolicy.html)
+   ========================================================== */
+.imprint-text,
+.policy-text {
+  text-align: justify;
+  hyphens: auto;
+  margin-inline: auto;
+  margin-block: clamp(4rem, 8vw, 8rem);
+
+  padding-left: clamp(1rem, 10%, 10rem);
+  padding-right: clamp(1rem, 10%, 10rem);
+  width: min(120ch, 100%);
+}
+
+/* ==========================================================
    ACCESSIBILITY
-   ===================== */
+   ========================================================== */
 
 .skip {
   position: absolute;
