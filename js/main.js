@@ -1,6 +1,6 @@
-// ==============================
+// ===============================================================
 // Components (Header & Footer loading)
-// ==============================
+// ===============================================================
 
 //load header component and then set language
 loadComponent("header", "components/header.html").then(() => {
@@ -55,9 +55,9 @@ async function loadComponent(selector, file) {
   element.innerHTML = html;
 }
 
-// ==============================
+// ===============================================================
 // Lightbox
-// ==============================
+// ===============================================================
 
 // store references to lightbox elements
 const lightbox = document.getElementById("lightbox");
@@ -134,9 +134,9 @@ if (lightbox && gallery) {
   });
 }
 
-// ==============================
+// ===============================================================
 // Video Lightbox
-// ==============================
+// ===============================================================
 
 // store references to lightbox elements
 const videoLightbox = document.getElementById("video-lightbox");

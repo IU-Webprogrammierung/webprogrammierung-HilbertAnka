@@ -36,20 +36,24 @@ function setLanguage(lang) {
 
 //update text in language-button
 function updateLanguageButton() {
+  const button = document.getElementById("language-switch");
 
-    const button = document.getElementById("language-switch");
+  // reset classes
+  button.classList.remove("en", "de");
 
-    if(currentLanguage === "en") {
+  if (currentLanguage === "en") {
+    button.classList.add("en");
+  } else {
+    button.classList.add("de");
+  }
 
-        button.textContent = "DE",
-        button.onclick = () => setLanguage("de");
-
+  button.onclick = () => {
+    if (currentLanguage === "en") {
+      setLanguage("de");
     } else {
-
-        button.textContent = "EN",
-        button.onclick = () => setLanguage("en");
-    
+      setLanguage("en");
     }
+  };
 }
 
 // save selected language

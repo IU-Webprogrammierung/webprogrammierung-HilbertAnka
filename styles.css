@@ -114,12 +114,15 @@ header {
   top: 0;
   background-color: white;
   z-index: 100;
+  padding-block: clamp(0.5rem, 1vw, 2rem);
+  padding-right: clamp(1rem, 3vw, 5rem);
 }
 
 header ul,
 header #language-switch {
   display: flex;
   justify-content: flex-end;
+  align-items: center;
 }
 
 header ul li a,
@@ -127,15 +130,68 @@ header ul li #language-switch {
   display: block;
   color: #646464;
   padding: 1.5rem 1.5rem;
+  border-radius: 900px;
 }
 
-header ul li a:hover,
-header ul li #language-switch:hover {
+header ul li a:hover {
   background-color: #e3d7d1;
 }
 
 ul li a.active {
   background-color: #f4edea;
+}
+
+/* ==========================================================
+   Language Button
+   ========================================================== */
+
+.lang-switch {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.track {
+  position: relative;
+  display: flex;
+  width: 8rem;
+
+  border-radius: 999px;
+  background: #f4edea;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+.option {
+  flex: 1;
+  text-align: center;
+  padding: 0.6rem 0;
+  z-index: 2;
+
+  color: #646464;
+  transition: color 0.2s ease;
+}
+
+.indicator {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 50%;
+  height: 100%;
+
+  background: #e3d7d1;
+  border-radius: 999px;
+
+  transition: left 0.3s ease;
+}
+
+/* DE activ */
+.lang-switch.de .indicator {
+  left: 50%;
+}
+
+.track:hover {
+  background: #efe3dd;
 }
 
 /* ==========================================================
@@ -246,6 +302,10 @@ ul li a.active {
    FOOTER
    ========================================================== */
 
+footer {
+  padding-block: clamp(1rem, 3vw, 3rem);
+}
+
 footer ul {
   background-color: white;
   display: flex;
@@ -276,12 +336,12 @@ footer ul li button:hover {
 }
 
 .hero {
-  padding-left: clamp(1rem, 5%, 5%);
+  padding-left: clamp(1rem, 5vw, 5rem);
   gap: clamp(2rem, 5vw, 6rem);
 }
 
 .hero-2 {
-  padding-right: clamp(1rem, 5%, 5%);
+  padding-right: clamp(1rem, 5vw, 5rem);
   gap: clamp(1rem, 3vw, 3rem);
 }
 
@@ -292,11 +352,11 @@ footer ul li button:hover {
 
 .hero-text {
   text-align: left;
-  padding-right: clamp(1rem, 7%, 14%);
+  padding-right: clamp(1rem, 6vw, 8rem);
 }
 .hero-text-2 {
   text-align: right;
-  padding-left: clamp(0.5rem, 3%, 5%);
+  padding-left: clamp(0rem, 2vw, 4rem);
 }
 
 /* Images of index.html */
@@ -698,12 +758,6 @@ footer ul li button:hover {
   margin-inline: clamp(1rem, 4vw, 6rem);
 }
 
-#gallery-abstract-list img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
 /* ==========================================================
    PICTURE STYLES
    ========================================================== */
@@ -743,7 +797,8 @@ footer ul li button:hover {
   border-radius: 5px;
 }
 
-#gallery img {
+#gallery img,
+#gallery-abstract-list img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -754,16 +809,18 @@ footer ul li button:hover {
    Photo Credits
    ========================================================== */
 
-#lightbox figcaption, .credited-img {
+#lightbox figcaption,
+.credited-img {
   position: relative;
   margin: 0;
 }
 
-#lightbox figcaption, .credited-img figcaption {
+#lightbox figcaption,
+.credited-img figcaption {
   position: absolute;
   bottom: 0.5rem;
   right: 0.5rem;
-  color: white;
+  color: rgb(248, 246, 246);
   font-size: 0.75rem;
   background-color: rgba(0, 0, 0, 0.4);
   padding: 0.2rem 0.5rem;
@@ -984,7 +1041,6 @@ footer ul li button:hover {
   padding-right: clamp(1rem, 10%, 10rem);
   width: min(120ch, 100%);
 }
-
 
 .contact-form {
   background-color: white;
