@@ -46,6 +46,7 @@
   font-weight: 700;
   font-display: swap;
 }
+
 /* ==========================================================
    RESET
    ========================================================== */
@@ -124,7 +125,8 @@ main {
    ========================================================== */
 
 header {
-  position: sticky; /* sticky header stays on top while scrolling */
+  position: sticky;
+  /* sticky header stays on top while scrolling */
   top: 0;
   background-color: white;
   z-index: 100;
@@ -175,6 +177,7 @@ ul li a.active {
   background: #f4edea;
   border: 1px solid rgba(0, 0, 0, 0.05);
 }
+
 .option {
   flex: 1;
   text-align: center;
@@ -265,6 +268,24 @@ ul li a.active {
   }
 }
 
+.dropdown-gallery a {
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+@media (max-width: 767px) {
+
+  .navigation-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navigation-list>li {
+    text-align: center;
+  }
+}
+
 /* ==========================================================
    Dropdown-Gallery
    ========================================================== */
@@ -272,6 +293,7 @@ ul li a.active {
 .has-dropdown-gallery {
   position: relative;
 }
+
 /* dropdown hidden by default */
 .dropdown-gallery {
   display: none;
@@ -306,9 +328,17 @@ ul li a.active {
   .dropdown-gallery {
     display: flex;
     flex-direction: column;
+
     position: static;
+    gap: 0.3rem;
+    margin-top: 0.5rem;
+    padding-left: 0.5rem;
     box-shadow: none;
-    padding-left: 1rem;
+  }
+
+  .dropdown-gallery li a {
+    font-size: 0.9rem;
+    opacity: 0.8;
   }
 }
 
@@ -330,7 +360,7 @@ footer ul li a {
   display: block;
   color: #646464;
   padding: 1rem 3rem;
-    border-radius: 900px;
+  border-radius: 900px;
 }
 
 footer ul li a:hover,
@@ -372,6 +402,7 @@ footer ul li button:hover {
   text-align: left;
   padding-right: clamp(1rem, 6vw, 8rem);
 }
+
 .hero-text-2 {
   text-align: right;
   padding-left: clamp(0rem, 2vw, 4rem);
@@ -432,6 +463,7 @@ footer ul li button:hover {
 }
 
 @media (max-width: 767px) {
+
   .hero,
   .hero-2 {
     gap: 2rem;
@@ -669,10 +701,9 @@ footer ul li button:hover {
 
 .subnav ul {
   display: grid;
-  grid-template-columns: repeat(
-    3,
-    1fr
-  ); /* grid-system with 3 columns for each navigation */
+  grid-template-columns: repeat(3,
+      1fr);
+  /* grid-system with 3 columns for each navigation */
   gap: clamp(0rem, 2vw, 3rem);
   justify-content: center;
 }
@@ -693,6 +724,7 @@ footer ul li button:hover {
 .subnav li:nth-child(1) {
   margin-right: -2rem;
 }
+
 /* move element down */
 .subnav li:nth-child(2) {
   margin-top: clamp(8rem, 15vw, 18rem);
@@ -705,17 +737,17 @@ footer ul li button:hover {
 
 .organic-img-3,
 .organic-img-3 img {
-  border-radius: 44% 56% 59% 41% / 49% 47% 53% 51%;
+  border-radius: 54% 46% 44% 56% / 54% 63% 37% 46%;
 }
 
 .organic-img-4,
 .organic-img-4 img {
-  border-radius: 31% 69% 47% 53% / 44% 47% 53% 56%;
+  border-radius: 57% 43% 52% 48% / 54% 48% 52% 46%;
 }
 
 .organic-img-5,
 .organic-img-5 img {
-  border-radius: 53% 47% 54% 46% / 40% 56% 44% 60%;
+  border-radius: 46% 54% 41% 59% / 60% 54% 46% 40%;
 }
 
 .organic-img-3,
@@ -733,7 +765,8 @@ footer ul li button:hover {
 
 @media (max-width: 767px) {
   .subnav ul {
-    grid-template-columns: 1fr; /* change to 1 column */
+    grid-template-columns: 1fr;
+    /* change to 1 column */
   }
 
   .subnav li:nth-child(1) {
@@ -798,6 +831,7 @@ footer ul li button:hover {
 
 /* 2 columns (tablet) */
 @media (max-width: 1023px) {
+
   #gallery,
   #gallery-abstract-list {
     grid-template-columns: repeat(2, 1fr);
@@ -806,10 +840,12 @@ footer ul li button:hover {
 
 /* 1 column (smartphone) */
 @media (max-width: 767px) {
+
   #gallery,
   #gallery-abstract-list {
     grid-template-columns: 1fr;
   }
+
   .gallery-abstract ul,
   #gallery {
     margin-inline: 3rem;
@@ -853,6 +889,10 @@ footer ul li button:hover {
   border-radius: 4px;
 }
 
+#lightbox figcaption:empty {
+  display: none;
+}
+
 /* ==========================================================
    Lightbox
    ========================================================== */
@@ -865,8 +905,14 @@ footer ul li button:hover {
   padding: 0;
 }
 
-#lightbox img {
+#lightbox figure {
+  margin: 0;
   max-width: 90vw;
+  max-height: 90vh;
+}
+
+#lightbox img {
+  max-width: 100%;
   max-height: 90vh;
   object-fit: contain;
   display: block;
@@ -917,6 +963,7 @@ footer ul li button:hover {
 .lightbox-next {
   right: 1rem;
 }
+
 /* hover effect */
 .lightbox-close:hover,
 .lightbox-prev:hover,
@@ -946,8 +993,7 @@ footer ul li button:hover {
 
 .studio-insights article {
   background-color: #f6efeb;
-  padding: clamp(0.8rem, 2vw, 3rem) clamp(1rem, 2.5vw, 4rem)
-    clamp(1rem, 2.5vw, 4rem);
+  padding: clamp(0.8rem, 2vw, 3rem) clamp(1rem, 2.5vw, 4rem) clamp(1rem, 2.5vw, 4rem);
 }
 
 .studio-insights {
@@ -1003,12 +1049,20 @@ footer ul li button:hover {
 .organic-img-1 {
   margin-top: clamp(4rem, 8vw, 8rem);
   margin-inline: auto;
+  transform: translateX(clamp(6rem, 9vw, 12rem));
   border: 2px solid #c68e7e;
   padding: 0.5rem;
   flex-shrink: 0;
   border-radius: 63% 37% 44% 56% / 50% 52% 48% 50%;
   width: clamp(20rem, 40vw, 40rem);
   height: clamp(20rem, 40vw, 40rem);
+}
+
+@media (max-width: 767px) {
+  .organic-img-1 {
+    margin-inline: auto;
+    transform: none;
+  }
 }
 
 .organic-img-1 img {
@@ -1103,7 +1157,8 @@ footer ul li button:hover {
 }
 
 #message {
-  grid-column: 1 / -1; /* span both columns */
+  grid-column: 1 / -1;
+  /* span both columns */
 }
 
 .contact-form button {
@@ -1147,6 +1202,7 @@ footer ul li button:hover {
   list-style: decimal;
   padding-left: 1.5rem;
 }
+
 .policy-text li {
   color: #6f4e4f;
   line-height: 1.8;
