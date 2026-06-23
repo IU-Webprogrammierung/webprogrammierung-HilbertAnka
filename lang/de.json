@@ -5,12 +5,14 @@
   "about_me_nav_title": "Über Mich",
   "contact_nav_title": "Kontakt",
 
-  "index_title": "Theatermalerin Anka Hilbert",
+  "index_title": "Theatermalerin",
+  "index_title_2": "Anka Hilbert",
   "welcome_text": "Willkommen in meiner Welt als Theatermalerin, in der großformatige Bildwelten entstehen und Farbe Räume zum Leben erweckt.",
   "index_title2": "Die Kunst der Theatermalerei",
   "index_intro1": "Auf dieser Seite kannst du mehr über das faszinierende und traditionelle Handwerk der Theatermalerei erfahren – eine Kunstform, die sich über viele Jahrhunderte hinweg nur wenig verändert hat. Außerdem erhältst du einen Einblick in eine Auswahl von Arbeiten, die ich in den vergangenen Jahren für verschiedene Bühnenproduktionen geschaffen habe.",
   "index_title3": "Theatermalerei",
-  "index_intro2": "Hast du dich schon einmal gefragt, wer die Bühnenbilder für Theaterstücke baut und bemalt? In jedem größeren Theater arbeiten verschiedene Handwerker:innen zusammen, um die Bühnenbilder für unterschiedliche Produktionen zu realisieren. Eine dieser Rollen ist die der Theatermalerin bzw. des Theatermalers im Malsaal. Anhand eines Bühnenhintergrunds zeige ich dir beispielhaft, wie ein solches Gemälde entsteht und wie vielfältig die Ergebnisse dieser Arbeit sein können.",
+  "index_intro2": "Hast du dich schon einmal gefragt, wer die Bühnenbilder für Theaterstücke baut und bemalt?",
+  "index_intro3": "In jedem größeren Theater arbeiten verschiedene Handwerker:innen zusammen, um die Bühnenbilder für unterschiedliche Produktionen zu realisieren. Eine dieser Rollen ist die der Theatermalerin bzw. des Theatermalers im Malsaal. Anhand eines Bühnenhintergrunds zeige ich dir beispielhaft, wie ein solches Gemälde entsteht und wie vielfältig die Ergebnisse dieser Arbeit sein können.",
   "video-description": "Hinter den Kulissen: So entsteht das Bühnenbild des Ballets 'Dornröschen'.",
 
   "gallery_title": "Galerie",
@@ -18,25 +20,32 @@
   "gallery_intro": "Hier bekommst du Einblicke in verschieden Arbeiten, welche während meiner Ausbildungszeit und meinen Anstellungen als Theatermalerin entstanden sind.",
 
   "practical_works_title": "Übungsbilder",
+  "practical_works_title_1": "Übungsbilder",
   "practical_works_intro": "Diese Kategorie zeigt eine Auswahl an Arbeiten aus meiner Studienzeit. Sie entstanden im Rahmen verschiedener Aufgabenstellungen zur Vertiefung grundlegender malerischer Techniken und Themen der Theatermalerei, darunter Landschaft, Architektur und Materialstudien.",
 
   "graduation_project_title": "Diplomarbeit",
+  "graduation_project_title_1": "Diplomarbeit",
   "graduation_project_intro": "Im Rahmen meiner Diplomarbeit entstand eine theatermalerische Umsetzung einer Fotografie eines verlassenen Theaters in Belgien. Das Motiv dieser verfallenen Architektur wurde als großformatiger Rückprospekt (6x9m) ausgearbeitet. Die Arbeit überträgt eine fotografische Vorlage in eine malerische Bühnenbildsituation und verbindet Komposition, Perspektive und Farbgestaltung zu einer räumlichen Illusion. Die folgenden Fotos geben Einblick in den Entstehungsprozess des Prospekts – von der Vorzeichnung über die Tinterung bis hin zur abschließenden Colorierung.",
 
   "sleeping_beauty_title": "'Dornröschen'",
+  "sleeping_beauty_title_1": "'Dornröschen'",
   "sleeping_beauty_intro": "Für die Ballettproduktion Dornröschen, eine Kooperation zwischen dem Theater Erfurt und dem Theater Altenburg Gera, habe ich verschiedene Bühnenelemente gestaltet, darunter den Rückprospekt, die Gassen sowie eine Soffitte. Der großformatige Schlossprospekt bildet das zentrale visuelle Element der Bühnenkulisse. Ergänzend dazu wurden die seitlichen Gassen und die Soffitte im gleichen gestalterischen Stil ausgeführt, um einen stimmigen und räumlich geschlossenen Bühnenraum zu schaffen. Alle Elemente basieren auf dem Bühnenbildentwurf von Timur Kinzikeev und wurden auf Grundlage architektonischer Recherchen zeichnerisch und malerisch umgesetzt. So entstand eine glaubhafte Raumillusion und die barocke Atmosphäre konnte die Inszenierung visuell unterstützen. Die folgenden Aufnahmen geben Einblick in den Entstehungsprozess des Bühnenbildes – von den ersten Vorzeichnungen über die malerische Ausarbeitung bis hin zur Wirkung des Rückprospekts und der Bühnenelemente während der Aufführung.",
 
   "architecture_title": "Architektur",
+  "architecture_title_1": "Architektur",
   "architecture_intro": "In der Architekturmalerei werden durch Perspektive, Fluchtlinien und Licht illusionistische Räume und Bauwerke für die Bühne geschaffen. Entscheidend ist dabei die Wirkung aus der Distanz und aus dem Blickwinkel des Publikums.",
 
   "translucent_title": "Transparentmalerei",
+  "translucent_title_1": "Transparentmalerei",
   "translucent_intro": "Die Transparentmalerei umfasst das Arbeiten auf durchscheinenden Materialien wie Tüll, Schleiernessel, Shirting oder Operafolie. Ziel ist die Gestaltung von Effekten, die insbesondere durch Hinterleuchtung ihre volle Wirkung entfalten. Durch rückseitige Beleuchtung entstehen räumliche und atmosphärische Transparenzeffekte. Die Technik erfordert besondere Präzision, da Korrekturen nur eingeschränkt möglich sind und nicht deckend überarbeitet werden kann.",
 
   "faux_finishes_title": "Materialimitation",
+  "faux_finishes_title_1": "Materialimitation",
   "faux_finishes_intro": "Materialimitation umfasst die illusionistische Darstellung verschiedenster Oberflächen wie Marmor, Holz, Rost oder Patina. Entscheidend sind dabei ein genaues Verständnis für Struktur, Farbigkeit und die charakteristischen Eigenschaften des jeweiligen Materials.",
 
   "studio_insights_title": "Malsaal-Einblicke",
-  "studio_insights_intro": "Theatermaler:innen arbeiten meist im Stehen, während das Werkstück flach auf dem Boden liegt. Mit langen Pinseln und Bürsten wird die Farbe aufgetragen. Durch den größeren Abstand behält man den Überblick, verliert sich nicht in Details und arbeitet bewusst „vom Zuschauerraum aus“. Denn was aus der Ferne wirkt, zählt: Große Striche, klare Formen, weniger Feinheiten. Die folgenden Aufnahmen entstanden während der Herstellung des Bühnenbilds für das Stück 'Dornröschen', insbesondere des Rückprospekts. Weitere Fotografien des Projekts sind in der Galerie unter 'Dornröschen' zu sehen.",
+  "studio_insights_intro_1": "Theatermaler:innen arbeiten meist im Stehen, während das Werkstück flach auf dem Boden liegt. Mit langen Pinseln und Bürsten wird die Farbe aufgetragen. Durch den größeren Abstand behält man den Überblick, verliert sich nicht in Details und arbeitet bewusst „vom Zuschauerraum aus“. Denn was aus der Ferne wirkt, zählt: Große Striche, klare Formen, weniger Feinheiten.",
+  "studio_insights_intro_2": "Die folgenden Aufnahmen entstanden während der Herstellung des Bühnenbilds für das Stück 'Dornröschen', insbesondere des Rückprospekts. Weitere Fotografien des Projekts sind in der Galerie unter 'Dornröschen' zu sehen.",
   "process_preparation_title": "Vorbereitung",
   "process_preparation_text": "Zunächst wird der Stoff auf dem Boden aufgespannt – im rechten Winkel, straff und möglichst faltenfrei. Dann folgt die Grundierung, welche mit Spritzpistole oder Bürste aufgetragen wird. Der Stoff wird dadurch „abgesperrt“, d.h. seine Saugfähigkeit wird begrenzt und die Poren des Stoffes geschlossen.",
   "sketch_transfer_title": "Vorzeichnung",
@@ -51,7 +60,11 @@
   "highlights_text": "Am Ende kommt das, was den Prospekt zum Leben erweckt: die Lichter. Mit feinen, hellen Tönen bis hin zu Weiß wird die Plastizität gestärkt. Diese Details geben Tiefe und erzeugen physische Präsenz. Ohne sie wirkt das Bild oft flach. Dennoch sollten Lichter sparsam verwendet werden. Wenige, gezielte Highlights entfalten ihre Wirkung umso mehr.",
 
   "about_me_title": "Über Mich",
-  "about_me_text": "Schon von klein auf hatte ich große Freude am Zeichnen und Malen. Irgendwann wurde mir klar, dass ich diesen Weg auch beruflich gehen möchte. Im Internet stieß ich auf den Beruf der Theatermalerin und ein Praktikum am Heidelberg Theater bestätigte mir, dass das der richtige Weg sein könnte. Drei Jahre lang absolvierte ich im Malsaal meine Ausbildung, lernte mit Farbe, Pinseln und anderen Werkstoffen professionell umzugehen und entdeckte die Vielfalt der Theatermalerei. Am Ende dieser Zeit fragte ich mich, ob ich mich noch weiterentwickeln könnte – insbesondere in der Perfektionierung meiner Maltechnik. Dieser Wunsch führte mich an die Hochschule für Bildende Künste in Dresden. Dort fand ich mehr Freiheit zum Experimentieren und gewann neue künstlerische Perspektiven. Seitdem habe ich an verschiedenen Theatern gearbeitet – mit unterschiedlichen Kolleg:innen und vielfältigen Arbeitsweisen. Jede Station hat mich ein Stück weitergebracht. Hier bekommst du einen Überblick über meinen bisherigen beruflichen Weg – von kurzen Engagements  bis hin zu längerfristigen Positionen.",
+  "about_me_text_1": "Schon von klein auf hatte ich große Freude am Zeichnen und Malen. Irgendwann wurde mir klar, dass ich diesen Weg auch beruflich gehen möchte. Im Internet stieß ich auf den Beruf der Theatermalerin und ein Praktikum am Heidelberg Theater bestätigte mir, dass das der richtige Weg sein könnte.",
+  "about_me_text_2": "Drei Jahre lang absolvierte ich im Malsaal meine Ausbildung, lernte mit Farbe, Pinseln und anderen Werkstoffen professionell umzugehen und entdeckte die Vielfalt der Theatermalerei.",
+  "about_me_text_3": "Am Ende dieser Zeit fragte ich mich, ob ich mich noch weiterentwickeln könnte – insbesondere in der Perfektionierung meiner Maltechnik. Dieser Wunsch führte mich an die Hochschule für Bildende Künste in Dresden. Dort fand ich mehr Freiheit zum Experimentieren und gewann neue künstlerische Perspektiven.",
+  "about_me_text_4": "Seitdem habe ich an verschiedenen Theatern gearbeitet – mit unterschiedlichen Kolleg:innen und vielfältigen Arbeitsweisen. Jede Station hat mich ein Stück weitergebracht.",
+  "about_me_text_5": "Hier bekommst du einen Überblick über meinen bisherigen beruflichen Weg – von kurzen Engagements  bis hin zu längerfristigen Positionen.",
   "about_me_title2": "Lebenslauf",
   "about_me_title3": "Berufserfahrung",
   "about_me_title4": "Abschluss",
@@ -81,5 +94,10 @@
   "legal_notice_title": "Impressum",
   "legal_notice_text": "Inhaltlich verantwortlich gemäß § 18 Abs. 2 MStV: Anka Hilbert, E-Mail: anka-scenicpainting@mailbox.org",
   "privacy_policy_title": "Datenschutz",
-  "privacy_policy_text": "Ich freue mich, dass Sie meine Website besuchen und sich für meine Arbeiten interessieren. Der Schutz Ihrer personenbezogenen Daten ist mir wichtig. Daher möchten ich Sie im Folgenden darüber informieren, welche Daten erhoben werden, wie sie verwendet werden und welche Rechte Sie diesbezüglich haben. 1. Datenerhebung und -verwendung: Wenn Sie das Kontaktformular ausfüllen, werden die von Ihnen angegebenen personenbezogenen Daten, wie beispielsweise Ihren Namen und Ihre E-Mail-Adresse, erhoben. Diese Informationen werden ausschließlich zur Bearbeitung Ihrer Anfrage und zur Kommunikation mit Ihnen verwendet. 2. Cookies: Die Website verwendet Cookies, um die Benutzerfreundlichkeit zu verbessern und die Darstellung zu optimieren. Cookies sind kleine Textdateien, die auf Ihrem Gerät gespeichert werden. Sie können die Speicherung von Cookies in Ihren Browsereinstellungen deaktivieren; dies kann jedoch die Funktionalität der Website einschränken. 3. Datenweitergabe: Ihre personenbezogenen Daten werden nicht ohne Ihre ausdrückliche Einwilligung an Dritte weitergegeben. 4. Ihre Rechte: Sie haben jederzeit das Recht, Auskunft über die gespeicherten personenbezogenen Daten zu verlangen, deren Berichtigung, Löschung oder Einschränkung der Verarbeitung zu verlangen, sowie das Recht auf Widerruf Ihrer Einwilligung und auf Datenübertragbarkeit. 5. Kontakt: Wenn Sie Fragen zum Datenschutz haben oder Ihre Rechte ausüben möchten, kontaktieren Sie mich bitte unter: anka-scenicpainting@mailbox.org"
+  "privacy_policy_text": "Ich freue mich, dass Sie meine Website besuchen und sich für meine Arbeiten interessieren. Der Schutz Ihrer personenbezogenen Daten ist mir wichtig. Daher möchten ich Sie im Folgenden darüber informieren, welche Daten erhoben werden, wie sie verwendet werden und welche Rechte Sie diesbezüglich haben.",
+  "privacy_policy_text_1": "Datenerhebung und -verwendung: Wenn Sie das Kontaktformular ausfüllen, werden die von Ihnen angegebenen personenbezogenen Daten, wie beispielsweise Ihren Namen und Ihre E-Mail-Adresse, erhoben. Diese Informationen werden ausschließlich zur Bearbeitung Ihrer Anfrage und zur Kommunikation mit Ihnen verwendet.",
+  "privacy_policy_text_2": "Cookies: Die Website verwendet Cookies, um die Benutzerfreundlichkeit zu verbessern und die Darstellung zu optimieren. Cookies sind kleine Textdateien, die auf Ihrem Gerät gespeichert werden. Sie können die Speicherung von Cookies in Ihren Browsereinstellungen deaktivieren; dies kann jedoch die Funktionalität der Website einschränken.",
+  "privacy_policy_text_3": "Datenweitergabe: Ihre personenbezogenen Daten werden nicht ohne Ihre ausdrückliche Einwilligung an Dritte weitergegeben.",
+  "privacy_policy_text_4": "Ihre Rechte: Sie haben jederzeit das Recht, Auskunft über die gespeicherten personenbezogenen Daten zu verlangen, deren Berichtigung, Löschung oder Einschränkung der Verarbeitung zu verlangen, sowie das Recht auf Widerruf Ihrer Einwilligung und auf Datenübertragbarkeit.",
+  "privacy_policy_text_5": "Kontakt: Wenn Sie Fragen zum Datenschutz haben oder Ihre Rechte ausüben möchten, kontaktieren Sie mich bitte unter: anka-scenicpainting@mailbox.org"
 }

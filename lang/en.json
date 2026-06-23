@@ -5,12 +5,14 @@
   "about_me_nav_title": "About Me",
   "contact_nav_title": "Contact",
 
-  "index_title": "Scenic Artist Anka Hilbert",
+  "index_title": "Scenic Artist",
+  "index_title_2": "Anka Hilbert",
   "welcome_text": "Welcome to my world as a professional Scenic Artist, where bringing colour to large-scale surfaces is business as usual.",
   "index_title2": "The Profession Of Scenic Artistry",
   "index_intro1": "On this page, you can learn more about the fascinating and traditional craft of scenic painting — an art form that has changed very little over the many centuries of practice. You can also explore a selection of works I have created over the past years for various stage productions.",
   "index_title3": "Scenery Painting",
-  "index_intro2": "Have you ever wondered who builds and paints the stage sets for theatre productions? Behind every larger theatre is a team of skilled craftspeople working together to bring productions to life. One of them is the scenic artist, working in the scenic studio. Using a theatre backdrop as an example, I’ll show you how such large-scale paintings are created and what this craft can look like in practice.",
+  "index_intro2": "Have you ever wondered who builds and paints the stage sets for theatre productions?",
+  "index_intro3": "Behind every larger theatre is a team of skilled craftspeople working together to bring productions to life. One of them is the scenic artist, working in the scenic studio. Using a theatre backdrop as an example, I’ll show you how such large-scale paintings are created and what this craft can look like in practice.",
   "video-description": "Behind the scenes: Creating the scenery for the ballet 'Sleeping Beauty'.",
 
   "gallery_title": "Gallery",
@@ -18,25 +20,32 @@
   "gallery_intro": "This page offers insight into a variety of works created throughout my education and professional experience as a scenic artist.",
 
   "practical_works_title": "Practical Works",
+  "practical_works_title_1": "Practical Works",
   "practical_works_intro": "This category shows a selection of works from my time as a student. They were created as part of various assignments aimed at deepening fundamental scenic painting techniques and topics, including landscape, architecture, and material studies.",
 
   "graduation_project_title": "Graduation Project",
+  "graduation_project_title_1": "Graduation Project",
   "graduation_project_intro": "As part of my diploma project, I created a scenic painting interpretation of a photograph of an abandoned theatre in Belgium. The motif of this decaying architecture was developed as a large-scale backdrop (6 × 9 m). The work translates a photographic reference into a painted stage setting, combining composition, perspective, and colour design to create an illusion of spatial depth. The following photographs document the development process of the backdrop, from the initial sketch and ink rendering to the final colour application.",
 
   "sleeping_beauty_title": "'Sleeping Beauty'",
+  "sleeping_beauty_title_1": "'Sleeping Beauty'",
   "sleeping_beauty_intro": "For the ballet production Sleeping Beauty, a collaboration between Theatre Erfurt and Theatre Altenburg Gera, I painted various scenic elements, including the backdrop, side wings, and the main valance. The large-scale palace backdrop forms the central visual element of the stage design. In addition, the side wings and the main valance were executed in a consistent visual style to create a coherent and spatially unified stage environment. All elements are based on the set design by Timur Kinzikeev and were developed through architectural research and translated into both drawing and painting. This resulted in a convincing illusion of space, supporting the baroque atmosphere of the production visually. The following photographs provide insight into the development process of the stage design — from the initial sketches and painted execution to the appearance of the backdrop and scenic elements during the performance.",
 
   "architecture_title": "Architecture",
+    "architecture_title_1": "Architecture",
   "architecture_intro": "In scenic architectural painting, perspective, vanishing lines, and light are used to create illusionistic spaces and architectural settings for the stage. What matters most is the effect from a distance and from the audience’s point of view.",
 
   "translucent_title": "Translucent Scenic Painting",
+  "translucent_title_1": "Translucent Scenic Painting",
   "translucent_intro": "Translucent painting involves working on special materials such as scrim, shirting, or opera film. The aim is to create effects that only fully unfold their impact when backlit. With rear illumination, spatial and atmospheric transparency effects are created. This technique requires particular precision, as corrections are limited and opaque overpainting is not possible.",
 
   "faux_finishes_title": "Faux Finishes",
+  "faux_finishes_title_1": "Faux Finishes",
   "faux_finishes_intro": "Faux Finishes involves the realistic imitation of materials such as marble, wood, or rust. A precise understanding of structure, colour, and the characteristic properties of each material is essential.",
 
   "studio_insights_title": "Studio Insights",
-  "studio_insights_intro": "Scenic artists typically work in a standing position while the piece lies flat on the floor. Large-scale application is carried out using long-handled brushes, brooms, and tools designed for broad, gestural work. Working at a distance is essential, as it maintains an overall view and aligns the process with the audience’s sight line in the auditorium. The focus lies on optical impact rather than fine detail: compositions are designed to be read from a distance, prioritising strong shapes, clear forms, and reduced micro-detail. The following photographs were taken during the production process of the stage set for 'Sleeping Beauty', particularly the large-scale backdrop. Additional images of the project can be found in the gallery section under 'Sleeping Beauty'.",
+  "studio_insights_intro_1": "Scenic artists typically work in a standing position while the piece lies flat on the floor. Large-scale application is carried out using long-handled brushes, brooms, and tools designed for broad, gestural work. Working at a distance is essential, as it maintains an overall view and aligns the process with the audience’s sight line in the auditorium. The focus lies on optical impact rather than fine detail: compositions are designed to be read from a distance, prioritising strong shapes, clear forms, and reduced micro-detail.",
+  "studio_insights_intro_2": "The following photographs were taken during the production process of the stage set for 'Sleeping Beauty', particularly the large-scale backdrop. Additional images of the project can be found in the gallery section under 'Sleeping Beauty'.",
   "process_preparation_title": "Preparation",
   "process_preparation_text": "The fabric is stretched out on the floor at precise right angles, pulled tight and as smooth as possible. A primer is then applied using a spray gun or brush. This process seals the fabric, limiting absorbency and closing its surface pores.",
   "sketch_transfer_title": "Sketch Transfer",
@@ -51,7 +60,11 @@
   "highlights_text": "The final stage involves adding highlights that bring the backdrop to life. Light tones, often extending to white, are used to enhance volume and spatial depth. These details create a sense of physical presence; without them, the image can appear flat. However, highlights should be applied with restraint, as a few targeted accents are more effective than excessive detailing.",
 
   "about_me_title": "About Me",
-  "about_me_text": "From an early age on, I found great pleasure in drawing and painting. At some point, I realised that I wanted to pursue this path professionally. While searching online, I discovered the profession of the scenic artist, and an internship at the Heidelberg Theatre confirmed that this could be the right direction for me. I then completed a three-year apprenticeship in the scenic workshop, where I learned to work professionally with paint, brushes and a variety of materials, acquiring the full range of scenic painting techniques. By the end of this period, I began to wonder whether I wanted to deepen my skills. The wish to  refine my painting technique, led me to the Academy of Fine Arts in Dresden. There, I found more freedom for experimentation and gained new artistic perspectives. Since then, I have worked at various theatres, alongside different colleagues and within diverse methods. Each position has contributed to my professional development. Here, you can find an overview of my professional journey so far—from shorter engagements to longer-term positions.",
+  "about_me_text_1": "From an early age on, I found great pleasure in drawing and painting. At some point, I realised that I wanted to pursue this path professionally. While searching online, I discovered the profession of the scenic artist, and an internship at the Heidelberg Theatre confirmed that this could be the right direction for me.",
+  "about_me_text_2": "I then completed a three-year apprenticeship in the scenic workshop, where I learned to work professionally with paint, brushes and a variety of materials, acquiring the full range of scenic painting techniques.",
+  "about_me_text_3": "By the end of this period, I began to wonder whether I wanted to deepen my skills. The wish to  refine my painting technique, led me to the Academy of Fine Arts in Dresden. There, I found more freedom for experimentation and gained new artistic perspectives.",
+  "about_me_text_4": "Since then, I have worked at various theatres, alongside different colleagues and within diverse methods. Each position has contributed to my professional development.",
+  "about_me_text_5": "Here, you can find an overview of my professional journey so far—from shorter engagements to longer-term positions.",
   "about_me_title2": "CV",
   "about_me_title3": "Work Experience",
 
@@ -81,5 +94,11 @@
   "legal_notice_title": "Legal Notice",
   "legal_notice_text": "Responsible for content in accordance with Section 18 (2) of the German Interstate Media Treaty (MStV): Anka Hilbert, Email: anka-scenicpainting@mailbox.org",
   "privacy_policy_title": "Privacy Policy",
-  "privacy_policy_text": "I am delighted that you are visiting my website and taking an interest in my work. The protection of your personal data is important to me. I would therefore like to inform you below about what data is collected, how it is used, and what rights you have in this regard. 1. Data collection and use: When you fill in the contact form, the personal data you provide, such as your name and email address, will be collected. This information is used exclusively to process your enquiry and to communicate with you. 2. Cookies: The website uses cookies to improve user-friendliness and optimise the display. Cookies are small text files that are stored on your device. You can disable the storage of cookies in your browser settings; however, this may restrict the functionality of the website. 3. Data Disclosure: Your personal data will not be disclosed to third parties without your express consent. 4. Your Rights: You have the right at any time to request information about the personal data stored, request its correction, erasure or restriction of processing, as well as the right to withdraw your consent and to data portability. 5. Contact: If you have any questions regarding data protection or wish to exercise your rights, please contact me at: anka-scenicpainting@mailbox.org"
+  "privacy_policy_text": "I am delighted that you are visiting my website and taking an interest in my work. The protection of your personal data is important to me. I would therefore like to inform you below about what data is collected, how it is used, and what rights you have in this regard.",
+  "privacy_policy_text_1": "Data collection and use: When you fill in the contact form, the personal data you provide, such as your name and email address, will be collected. This information is used exclusively to process your enquiry and to communicate with you.",
+  "privacy_policy_text_2": "Cookies: The website uses cookies to improve user-friendliness and optimise the display. Cookies are small text files that are stored on your device. You can disable the storage of cookies in your browser settings; however, this may restrict the functionality of the website.",
+  "privacy_policy_text_3": "Data Disclosure: Your personal data will not be disclosed to third parties without your express consent.",
+  "privacy_policy_text_4": "Your Rights: You have the right at any time to request information about the personal data stored, request its correction, erasure or restriction of processing, as well as the right to withdraw your consent and to data portability.",
+  "privacy_policy_text_5": "Contact: If you have any questions regarding data protection or wish to exercise your rights, please contact me at: anka-scenicpainting@mailbox.org"
 }
+
