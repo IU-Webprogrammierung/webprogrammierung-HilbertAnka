@@ -184,7 +184,7 @@ ul li a.active {
   padding: 0.6rem 0;
   z-index: 2;
 
-  color: #646464;
+  color: #525252;
   transition: color 0.2s ease;
 }
 
@@ -208,7 +208,7 @@ ul li a.active {
 }
 
 .track:hover {
-  background: #efe3dd;
+  background: #f0e6e1;
 }
 
 /* ==========================================================
@@ -1164,7 +1164,7 @@ footer ul li button:hover {
 .contact-form button {
   grid-column: 1 / -1;
   padding: 1rem;
-  background-color: #c68e7e;
+  background-color: #8f5a4d;
   color: white;
   border: none;
   border-radius: 6px;
@@ -1173,7 +1173,7 @@ footer ul li button:hover {
 }
 
 .contact-form button:hover {
-  background-color: #b87968;
+  background-color: #704438;
 }
 
 /* Mobile */
@@ -1221,4 +1221,10 @@ footer ul li button:hover {
   width: 1px;
   height: 1px;
   overflow: hidden;
+}
+
+.skip:focus {
+  position: static;
+  width: auto;
+  height: auto;
 }

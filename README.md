@@ -2,13 +2,12 @@
 
 ## 🌐 Live Demo
 
-[![Live Demo](https://img.shields.io/badge/Live%20Website-View-8c6b5a?style=for-the-badge)](https://iu-webprogrammierung.github.io/webprogrammierung-HilbertAnka/)
-
+[Live Website ansehen](https://iu-webprogrammierung.github.io/webprogrammierung-HilbertAnka/)
 ---
 
 ## ⭐ Bewertungsrelevante Leistungen 
 
-- **Mehrsprachigkeit (DE/EN)** via JSON-Translation und `localStorage`-persistenter Sprachwahl
+- **Mehrsprachigkeit (DE/EN)** durch JSON-basierte Internationalisierung und persistente Sprachwahl via `localStorage`
 - **Navigation mit Dropdown-System** inkl. JavaScript-Interaktion und State Handling
 - **JavaScript Lightbox-System** mit Navigation (Keyboard Support, Next/Prev)
 - **Interaktive UI-Elemente** (Hover States ...)
