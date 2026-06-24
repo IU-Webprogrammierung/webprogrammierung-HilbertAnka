@@ -100,5 +100,11 @@
   "privacy_policy_text_2": "Cookies: Die Website verwendet Cookies, um die Benutzerfreundlichkeit zu verbessern und die Darstellung zu optimieren. Cookies sind kleine Textdateien, die auf Ihrem Gerät gespeichert werden. Sie können die Speicherung von Cookies in Ihren Browsereinstellungen deaktivieren; dies kann jedoch die Funktionalität der Website einschränken.",
   "privacy_policy_text_3": "Datenweitergabe: Ihre personenbezogenen Daten werden nicht ohne Ihre ausdrückliche Einwilligung an Dritte weitergegeben.",
   "privacy_policy_text_4": "Ihre Rechte: Sie haben jederzeit das Recht, Auskunft über die gespeicherten personenbezogenen Daten zu verlangen, deren Berichtigung, Löschung oder Einschränkung der Verarbeitung zu verlangen, sowie das Recht auf Widerruf Ihrer Einwilligung und auf Datenübertragbarkeit.",
-  "privacy_policy_text_5": "Kontakt: Wenn Sie Fragen zum Datenschutz haben oder Ihre Rechte ausüben möchten, kontaktieren Sie mich bitte unter: anka-scenicpainting@mailbox.org"
+  "privacy_policy_text_5": "Kontakt: Wenn Sie Fragen zum Datenschutz haben oder Ihre Rechte ausüben möchten, kontaktieren Sie mich bitte unter: anka-scenicpainting@mailbox.org",
+
+  "error_code": "404",
+  "404_title": "Ups! Seite nicht gefunden",
+  "404_text": "Es sieht so aus, als wäre diese Seite im Malsaal verloren gegangen.",
+  "404_link": "Zurück zur Startseite"
+
 }
