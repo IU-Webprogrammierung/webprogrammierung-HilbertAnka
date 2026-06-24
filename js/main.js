@@ -145,10 +145,12 @@ const videoOpen = document.getElementById("video-open");
 const VIDEO_URL = "https://www.youtube-nocookie.com/embed/8BNDVy-Xemw";
 
 // open video lightbox
-videoOpen.addEventListener("click", () => {
-  videoIframe.src = VIDEO_URL; // video load
-  videoLightbox.showModal();
-});
+if (videoOpen && videoLightbox && videoIframe) {
+  videoOpen.addEventListener("click", () => {
+    videoIframe.src = VIDEO_URL;
+    videoLightbox.showModal();
+  });
+
 
 // close video lightbox
 videoLightbox.addEventListener("click", (e) => {
@@ -160,3 +162,4 @@ videoLightbox.addEventListener("click", (e) => {
     videoLightbox.close();
   }
 });
+}
