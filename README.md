@@ -6,10 +6,10 @@
 ## ⭐ Bewertungsrelevante Leistungen 
 
 - **Mehrsprachigkeit (DE/EN)** durch JSON-basierte Internationalisierung und persistente Sprachwahl via `localStorage`
-- **Navigation mit Dropdown-System** inkl. JavaScript-Interaktion und State Handling
+- **Wiederverwendbare UI-Komponenten** (Header & Footer) mit konsistenter Gestaltung
+- **Navigation mit Dropdown-System** sowie mobiler Hamburger-Navigation inkl. JavaScript-Interaktion und State Handling (Smartphoneversion)
 - **JavaScript Lightbox-System** mit Navigation (Keyboard Support, Next/Prev)
 - **Interaktive UI-Elemente** (Hover States ...)
-- **Wiederverwendbare UI-Komponenten** (Header & Footer) mit konsistenter Gestaltung
 - **Weboptimierte Medien** durch WebP-Formate und eingebettetes YouTube-Video
 - **Formular mit HTML5-Validierung** (required & E-Mail-Typ)
 - **individuelle 404-Seite**

@@ -2,7 +2,7 @@
 // Components (Header & Footer loading)
 // ===============================================================
 
-//load header component and then set language
+// load header component and then set language
 loadComponent("header", "components/header.html").then(() => {
   //active link - highlights the current page
   const currentPage = window.location.pathname.split("/").pop();
@@ -21,18 +21,18 @@ loadComponent("header", "components/header.html").then(() => {
   links.forEach((link) => {
     const linkHref = link.getAttribute("href");
 
-    //highlight exact match
+    // highlight exact match
     if (link.getAttribute("href") === currentPage) {
       link.classList.add("active");
     }
 
-    //highlight when on a gallery subpage
+    // highlight when on a gallery subpage
     if (linkHref === "gallery.html" && galleryPages.includes(currentPage)) {
       link.classList.add("active");
     }
   });
 
-  //hamburger-button
+  // hamburger-button
   const toggle = document.getElementById("menu-toggle");
   const navList = document.getElementById("navigation-list");
 
@@ -45,7 +45,7 @@ loadComponent("header", "components/header.html").then(() => {
   loadLanguage(currentLanguage);
 });
 
-//load footer component
+// load footer component
 loadComponent("footer", "components/footer.html");
 
 async function loadComponent(selector, file) {
