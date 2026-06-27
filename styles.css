@@ -803,6 +803,93 @@ footer ul li button:hover {
   margin-inline: clamp(1rem, 4vw, 6rem);
 }
 
+/* gallery overview hover effects */
+
+#gallery-abstract-list li {
+  position: relative;
+  overflow: hidden;
+}
+
+#gallery-abstract-list li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+#gallery-abstract-list img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+/* desktop: dark overlay during hover */
+.gallery-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(31, 20, 16, 0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.35s ease;
+  pointer-events: none;
+}
+
+.gallery-overlay span {
+  font-family: "Cormorant Garamond";
+  font-size: clamp(2rem, 2.5vw, 4rem);
+  color: white;
+}
+
+#gallery-abstract-list li:hover .gallery-overlay {
+  opacity: 1;
+}
+
+#gallery-abstract-list li:hover img {
+  transform: scale(1.05);
+}
+
+/* tablet & mobile: frosted glass bar */
+@media (max-width: 1023px) {
+  .gallery-overlay {
+    display: none;
+  }
+
+  .glass-bar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 0.4rem 0.6rem;
+    background: rgba(155, 115, 117, 0.35);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-top: 1px solid rgba(255, 255, 255, 0.25);
+    text-align: center;
+  }
+
+  .glass-bar span {
+    font-family: "Cormorant Garamond";
+    font-size: clamp(1.2rem, 2.5vw, 1.5rem);
+    color: white;
+  }
+
+  #gallery-abstract-list .credited-img figcaption {
+    bottom: 3rem;
+  }
+}
+
+
+
+/* hide glass bar for desktop */
+@media (min-width: 1024px) {
+  .glass-bar {
+    display: none;
+  }
+}
+
+
 /* ==========================================================
    PICTURE STYLES
    ========================================================== */
@@ -851,6 +938,15 @@ footer ul li button:hover {
   height: 100%;
   object-fit: cover;
   cursor: pointer;
+}
+
+/* zoom-effect */
+#gallery li img {
+  transition: transform 0.4s ease;
+}
+
+#gallery li:hover img {
+  transform: scale(1.05);
 }
 
 /* ==========================================================
@@ -1293,13 +1389,13 @@ footer ul li button:hover {
   .error-container {
     grid-template-columns: 1fr;
     text-align: center;
-      margin-right: 0;
+    margin-right: 0;
   }
 
   .error-text {
     text-align: center;
     margin: 0 auto;
-  
+
 
   }
 
