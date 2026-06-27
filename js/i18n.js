@@ -4,33 +4,28 @@ let currentLanguage = "en";
 // Code to load language and update content
 async function loadLanguage(lang) {
 
-    currentLanguage = lang;
-    document.documentElement.lang = lang;
+  currentLanguage = lang;
+  document.documentElement.lang = lang;
 
-    const response = await fetch(`lang/${lang}.json`); // load JSON
-    const translation = await response.json(); // convert JSON to JavaScript -> text becomes an object
+  const response = await fetch(`lang/${lang}.json`); // load JSON
+  const translation = await response.json(); // convert JSON to JavaScript -> text becomes an object
 
-    // get all keys from the translations object
-    // for each key: find matching HTML element and update its textContent
-    Object.keys(translation).forEach(key => { 
+  // find all elements with data-i18n attribute and update their textContent
+  document.querySelectorAll("[data-i18n]").forEach(element => {
+    const key = element.getAttribute("data-i18n");
+    if (translation[key]) {
+      element.textContent = translation[key];
+    }
+  });
 
-        const element = document.getElementById(key);
-
-        if (element) {
-            element.textContent = translation[key];
-        }
-    
-
-    });
-
-    updateLanguageButton();
+  updateLanguageButton();
 }
 
 // language switch function
 function setLanguage(lang) {
-    localStorage.setItem("language", lang)
-    document.documentElement.lang = lang;
-    loadLanguage(lang);
+  localStorage.setItem("language", lang)
+  document.documentElement.lang = lang;
+  loadLanguage(lang);
 }
 
 
@@ -59,8 +54,8 @@ function updateLanguageButton() {
 // save selected language
 const savedLanguage = localStorage.getItem("language");
 
-        if (savedLanguage) {
-            loadLanguage(savedLanguage);
-        } else {
-            loadLanguage(currentLanguage);
-        }
+if (savedLanguage) {
+  loadLanguage(savedLanguage);
+} else {
+  loadLanguage(currentLanguage);
+}
