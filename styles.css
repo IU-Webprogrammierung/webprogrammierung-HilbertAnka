@@ -82,13 +82,14 @@ img {
   --heading: #7a5254;
   --text: #5a3d3e;
   --text-muted: #646464;
+  --overlay-text: #ffffff;
 
   /* ==================
      Interaction States
      ================== */
 
   --surface-hover: #e3d7d1;
-  --surface-active: #ebd4ce;
+  --surface-active: #d2b4ac;
 
   --image-overlay: rgba(31, 20, 16, 0.55);
 
@@ -141,12 +142,78 @@ img {
 
 /* ==================
      DARK MODE
-     ================== */
-
+   ================== */
 
 [data-theme="dark"] {
 
+  /* ==================
+     Backgrounds (warmer, weniger schwarz)
+     ================== */
+
+  --bg: #141010;
+  --surface: #1c1616;
+  --surface-soft: #221b1b;
+  --surface-muted: #2a2222;
+
+  /* ==================
+     Text (mehr Papiergefühl, weniger grau)
+     ================== */
+
+  --heading: #f0e3dd;
+  --text: #dcc8c0;
+  --text-muted: #b39f98;
+
+  /* ==================
+     Interaction
+     ================== */
+
+  --surface-hover: #2c2323;
+  --surface-active: #352a2a;
+
+  /* ==================
+     Accent (leicht entsättigt = edler)
+     ================== */
+
+  --accent: #b97f70;
+  --accent-soft: #cda79e;
+  --accent-hover: #9f6659;
+
+  /* ==================
+     Borders (weniger “grau digital”, mehr “material”)
+     ================== */
+
+  --border: rgba(205, 170, 160, 0.35);
+  --border-muted: rgba(255, 255, 255, 0.06);
+  --border-divider: rgba(255, 255, 255, 0.05);
+
+  /* ==================
+     Overlays (stabil lassen, nur leicht feinjustieren)
+     ================== */
+
+  --overlay-dark: rgba(0, 0, 0, 0.55);
+  --overlay-dark-strong: rgba(0, 0, 0, 0.82);
+  --overlay-modal: rgba(0, 0, 0, 0.9);
+
+  --overlay-light: rgba(255, 255, 255, 0.04);
+
+  /* ==================
+     Shadow = Depth (nicht “Schmutz”)
+     ================== */
+
+  --shadow-sm: 0 6px 18px rgba(0, 0, 0, 0.45);
+  --shadow-md: 0 18px 50px rgba(0, 0, 0, 0.55);
+
+  /* optional: “gallery glow separation” */
+  --glow: 0 0 0 1px rgba(255, 255, 255, 0.04);
+
+  /* ==================
+     glass (sehr wichtig für editorial feel)
+     ================== */
+
+  --glass-bg: rgba(30, 22, 22, 0.55);
+  --glass-border: rgba(255, 255, 255, 0.06);
 }
+
 
 
 
@@ -211,8 +278,9 @@ header {
   top: 0;
   background-color: var(--bg);
   z-index: 100;
-  padding-block: clamp(0.5rem, 1vw, 2rem);
-  padding-right: clamp(1rem, 3vw, 5rem);
+  padding-block: clamp(1rem, 1.8vw, 2.5rem);
+  padding-right: clamp(0.8rem, 2vw, 4rem);
+  padding-left: clamp(1rem, 3vw, 5rem);
 }
 
 header ul,
@@ -226,16 +294,101 @@ header ul li a,
 header ul li #language-switch {
   display: block;
   color: var(--text-muted);
-  padding: 1.5rem 1.5rem;
-  border-radius: 900px;
+  padding: 0.8rem 0.8rem;
+  border-bottom: 2px solid transparent;
+  transition: border-color 0.2s ease;
 }
 
 header ul li a:hover {
-  background-color: var(--surface-hover);
+  background-color: transparent;
+  border-bottom-color: var(--surface-hover);
 }
 
 ul li a.active {
-  background-color: var(--surface-active);
+  background-color: transparent;
+  border-bottom-color: var(--surface-active);
+}
+
+/* ==========================================================
+   Dark-Mode Button
+   ========================================================== */
+
+.theme-switch {
+  position: absolute;
+  left: clamp(1rem, 3vw, 5rem);
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.theme-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+  position: absolute;
+}
+
+.theme-track {
+  --thumb-size: 1.8rem;
+  --track-padding: 0.3rem;
+
+  width: calc(var(--thumb-size) * 2 + var(--track-padding) * 3);
+  height: calc(var(--thumb-size) + var(--track-padding) * 2);
+  padding: var(--track-padding);
+
+  background: var(--surface);
+  border: 1px solid var(--border-muted);
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  transition: background 0.3s ease;
+}
+
+.theme-thumb {
+  width: var(--thumb-size);
+  height: var(--thumb-size);
+  background: var(--surface-hover);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(var(--thumb-size) * 0.7);
+  line-height: 1;
+  transition: transform 0.3s ease;
+}
+
+.theme-switch:hover .theme-track {
+  background: var(--surface-active);
+}
+
+.theme-switch input:checked~.theme-track {
+  background: var(--decor-secondary);
+  border-color: var(--decor-secondary);
+}
+
+.theme-switch input:checked~.theme-track .theme-thumb {
+  transform: translateX(calc(var(--thumb-size) + var(--track-padding)));
+}
+
+.theme-switch input:focus-visible~.theme-track {
+  outline: 2px solid var(--accent-soft);
+  outline-offset: 3px;
+}
+
+.theme-switch:hover input:checked~.theme-track {
+  background: var(--decor-primary);
+  border-color: var(--decor-primary);
+}
+
+
+@media (max-width: 767px) {
+  .theme-switch {
+    position: static;
+    transform: none;
+    padding: 1.5rem 0.8rem;
+  }
 }
 
 /* ==========================================================
@@ -265,7 +418,7 @@ ul li a.active {
   padding: 0.6rem 0;
   z-index: 2;
 
-  color: var(--text-muted);
+  color: var(--text);
   transition: color 0.2s ease;
 }
 
@@ -289,7 +442,7 @@ ul li a.active {
 }
 
 .track:hover {
-  background: var(--surface-soft);
+  background: var(--surface-active);
 }
 
 /* ==========================================================
@@ -441,15 +594,16 @@ footer ul {
 footer ul li a {
   display: block;
   color: var(--text-muted);
-  padding: 1rem 3rem;
-  border-radius: 900px;
+  padding: 0.8rem 1rem;
+  border-bottom: 2px solid transparent;
+  transition: border-color 0.2s ease;
 }
 
 footer ul li a:hover,
 footer ul li button:hover {
-  background-color: var(--surface-hover);
+  background-color: transparent;
+  border-bottom-color: var(--surface-hover);
 }
-
 
 
 
@@ -597,6 +751,7 @@ footer ul li button:hover {
 #gallery_title2 {
   font-size: clamp(2rem, 4vw, 3.5rem);
   font-family: "Cormorant Garamond";
+  color: var(--overlay-text);
 
   display: flex;
   justify-content: center;
@@ -609,7 +764,6 @@ footer ul li button:hover {
   border-radius: 60% 40% 53% 47% / 54% 57% 43% 46%;
   background-color: var(--decor-primary);
 
-  color: var(--bg);
 }
 
 #gallery_title2::before,
@@ -673,6 +827,17 @@ footer ul li button:hover {
   padding-right: clamp(1rem, 10%, 10rem);
   padding-bottom: 3rem;
   padding-top: 10rem;
+  position: relative;
+}
+
+.video::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 8%;
+  right: 8%;
+  height: 4px;
+  background: var(--border-divider);
 }
 
 .organic-video {
@@ -707,7 +872,7 @@ footer ul li button:hover {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: var(--bg);
+  color: white;
   font-size: 3rem;
   opacity: 0.8;
   text-shadow: var(--glow);
@@ -787,6 +952,7 @@ footer ul li button:hover {
   /* grid-system with 3 columns for each navigation */
   gap: clamp(0rem, 2vw, 3rem);
   justify-content: center;
+  margin-top: clamp(5rem, 15vw, 20rem);
 }
 
 .subnav li {
@@ -862,6 +1028,13 @@ footer ul li button:hover {
     margin-left: 0;
   }
 
+  .subnav li:nth-child(1),
+  .subnav li:nth-child(2),
+  .subnav li:nth-child(3) {
+    padding: 2.5rem;
+  }
+
+
   /* organic forms for images */
   .organic-img-3,
   .organic-img-4,
@@ -905,6 +1078,13 @@ footer ul li button:hover {
   overflow: hidden;
 }
 
+#gallery li,
+#gallery-abstract-list li {
+  background: var(--surface-elevated);
+  padding: 0.4rem;
+  border: 1px solid var(--border-divider);
+  box-shadow: var(--shadow-sm);
+}
 
 #gallery-abstract-list li a {
   display: block;
@@ -935,7 +1115,7 @@ footer ul li button:hover {
 .gallery-overlay span {
   font-family: "Cormorant Garamond";
   font-size: clamp(2rem, 2.5vw, 4rem);
-  color: var(--bg);
+  color: var(--overlay-text);
 }
 
 #gallery-abstract-list li:hover .gallery-overlay {
@@ -943,7 +1123,9 @@ footer ul li button:hover {
 }
 
 #gallery-abstract-list li:hover img {
-  transform: scale(1.05);
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
 }
 
 /* tablet & mobile: frosted glass bar */
@@ -959,7 +1141,7 @@ footer ul li button:hover {
     right: 0;
     padding: 0.4rem 0.6rem;
     background: var(--glass-bg);
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(14px);
     -webkit-backdrop-filter: blur(10px);
     border-top: 1px solid var(--glass-border);
     text-align: center;
@@ -968,11 +1150,11 @@ footer ul li button:hover {
   .glass-bar span {
     font-family: "Cormorant Garamond";
     font-size: clamp(1.2rem, 2.5vw, 1.5rem);
-    color: var(--bg);
+    color: var(--overlay-text);
   }
 
   #gallery-abstract-list .credited-img figcaption {
-    bottom: 3rem;
+    bottom: 2.2rem;
   }
 }
 
@@ -1059,7 +1241,7 @@ footer ul li button:hover {
   position: absolute;
   bottom: 0.5rem;
   right: 0.5rem;
-  color: var(--bg);
+  color: var(--overlay-text);
   font-size: 0.75rem;
   background-color: var(--overlay-dark);
   padding: 0.2rem 0.5rem;

@@ -42,6 +42,8 @@ loadComponent("header", "components/header.html").then(() => {
     toggle.setAttribute("aria-expanded", navList.classList.contains("open"));
   });
 
+  initThemeToggle();
+
   loadLanguage(currentLanguage);
 });
 
