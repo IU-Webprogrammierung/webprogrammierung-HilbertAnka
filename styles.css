@@ -54,13 +54,109 @@ img {
   height: auto;
 }
 
+
+/* ==========================================================
+   COLOURS (LIGHT AND DARK MODE)
+   ========================================================== */
+
+
+/* ==================
+     LIGHT MODE
+    ================== */
+
+:root {
+
+  /* ==================
+     Backgrounds
+     ================== */
+
+  --bg: #ffffff;
+  --surface: #f4edea;
+  --surface-soft: #f6efeb;
+  --surface-muted: #f3e7e2;
+
+  /* ==================
+     Text
+     ================== */
+
+  --heading: #7a5254;
+  --text: #5a3d3e;
+  --text-muted: #646464;
+
+  /* ==================
+     Interaction States
+     ================== */
+
+  --surface-hover: #e3d7d1;
+  --surface-active: #ebd4ce;
+
+  --image-overlay: rgba(31, 20, 16, 0.55);
+
+  --accent: #8f5a4d;
+  --accent-soft: #b17264;
+  --accent-hover: #704438;
+
+  /* ==================
+     Border
+     ================== */
+
+  --border: #c68e7e;
+  --border-muted: #f0d2c9;
+  --border-divider: rgba(255, 255, 255, 0.3);
+
+  /* ==================
+     Decorative Layers and Accent Colours
+     ================== */
+
+  --decor-primary: #8f6062;
+  --decor-secondary: #be9597;
+  --decor-tertiary: #dabebf;
+
+
+  /* ==================
+     Overlay / Shadow
+     ================== */
+
+  --overlay-dark: rgba(0, 0, 0, 0.5);
+  --overlay-dark-strong: rgba(0, 0, 0, 0.8);
+  --overlay-modal: rgba(0, 0, 0, 0.9);
+  --overlay-light: rgba(255, 255, 255, 0.25);
+
+
+  --glow: 0 0 10px rgba(0, 0, 0, 0.5);
+
+  --shadow-sm: 0 4px 8px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 6px 16px rgba(0, 0, 0, 0.15);
+
+
+  /* ==================
+     glass-bar
+     ================== */
+  --glass-bg: rgba(155, 115, 117, 0.35);
+  --glass-border: rgba(255, 255, 255, 0.25);
+
+}
+
+
+
+/* ==================
+     DARK MODE
+     ================== */
+
+
+[data-theme="dark"] {
+
+}
+
+
+
 /* ==========================================================
    BASE STYLES
    ========================================================== */
 
 body {
   font-family: "Montserrat", sans-serif;
-  background-color: white;
+  background-color: var(--bg);
   margin: 0;
   padding: 0;
   display: grid;
@@ -69,29 +165,29 @@ body {
 }
 
 h1,
-h2 {
+h2,
+h3 {
   font-family: "Cormorant Garamond";
-  color: #7a5254;
+  color: var(--heading);
+
+}
+
+h1,
+h2 {
+  font-size: clamp(2rem, 4vw, 3.5rem);
 }
 
 h1 {
   font-weight: 700;
 }
 
-h1,
-h2 {
-  font-family: "Cormorant Garamond";
-  font-size: clamp(2rem, 4vw, 3.5rem);
-}
 
 h3 {
-  font-family: "Cormorant Garamond";
-  color: #8a6365;
   font-size: clamp(1.8rem, 3.5vw, 2.8rem);
 }
 
 p {
-  color: #5a3d3e;
+  color: var(--text);
   line-height: 1.8;
   font-size: clamp(1rem, 2vw, 1.3rem);
 }
@@ -101,7 +197,7 @@ a {
 }
 
 main {
-  background-color: #f4edea;
+  background-color: var(--surface);
   overflow-x: hidden;
 }
 
@@ -113,7 +209,7 @@ header {
   position: sticky;
   /* sticky header stays on top while scrolling */
   top: 0;
-  background-color: white;
+  background-color: var(--bg);
   z-index: 100;
   padding-block: clamp(0.5rem, 1vw, 2rem);
   padding-right: clamp(1rem, 3vw, 5rem);
@@ -129,17 +225,17 @@ header #language-switch {
 header ul li a,
 header ul li #language-switch {
   display: block;
-  color: #646464;
+  color: var(--text-muted);
   padding: 1.5rem 1.5rem;
   border-radius: 900px;
 }
 
 header ul li a:hover {
-  background-color: #e3d7d1;
+  background-color: var(--surface-hover);
 }
 
 ul li a.active {
-  background-color: #f4edea;
+  background-color: var(--surface-active);
 }
 
 /* ==========================================================
@@ -159,8 +255,8 @@ ul li a.active {
   width: 8rem;
 
   border-radius: 999px;
-  background: #f4edea;
-  border: 1px solid rgba(0, 0, 0, 0.05);
+  background: var(--surface);
+  border: 1px solid var(--border-muted);
 }
 
 .option {
@@ -169,7 +265,7 @@ ul li a.active {
   padding: 0.6rem 0;
   z-index: 2;
 
-  color: #525252;
+  color: var(--text-muted);
   transition: color 0.2s ease;
 }
 
@@ -181,7 +277,7 @@ ul li a.active {
   width: 50%;
   height: 100%;
 
-  background: #e3d7d1;
+  background: var(--surface-hover);
   border-radius: 999px;
 
   transition: left 0.3s ease;
@@ -193,7 +289,7 @@ ul li a.active {
 }
 
 .track:hover {
-  background: #f0e6e1;
+  background: var(--surface-soft);
 }
 
 /* ==========================================================
@@ -216,7 +312,7 @@ ul li a.active {
   display: block;
   width: 25px;
   height: 3px;
-  background-color: #646464;
+  background-color: var(--text-muted);
   border-radius: 3px;
   transition:
     transform 0.3s ease,
@@ -285,10 +381,10 @@ ul li a.active {
   position: absolute;
   top: 100%;
   left: 0;
-  background-color: white;
+  background-color: var(--bg);
   min-width: 200px;
   z-index: 100;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--shadow-sm);
   padding: 8px 0;
 }
 
@@ -301,12 +397,12 @@ ul li a.active {
 /* dropdown links */
 .dropdown-gallery a {
   padding: 0.75rem 1rem;
-  color: #646464;
+  color: var(--text-muted);
   display: block;
 }
 
 .dropdown-gallery a:hover {
-  background-color: #e3d7d1;
+  background-color: var(--surface-hover);
 }
 
 /* mobile: always visible when menu is open */
@@ -337,21 +433,21 @@ footer {
 }
 
 footer ul {
-  background-color: white;
+  background-color: var(--bg);
   display: flex;
   justify-content: center;
 }
 
 footer ul li a {
   display: block;
-  color: #646464;
+  color: var(--text-muted);
   padding: 1rem 3rem;
   border-radius: 900px;
 }
 
 footer ul li a:hover,
 footer ul li button:hover {
-  background-color: #e3d7d1;
+  background-color: var(--surface-hover);
 }
 
 
@@ -408,7 +504,7 @@ footer ul li button:hover {
 .organic-img-3,
 .organic-img-4,
 .organic-img-5 {
-  border: 2px solid #c68e7e;
+  border: 2px solid var(--border);
   padding: 0.5rem;
   flex-shrink: 0;
 }
@@ -511,9 +607,9 @@ footer ul li button:hover {
   height: 35vmin;
 
   border-radius: 60% 40% 53% 47% / 54% 57% 43% 46%;
-  background-color: #8f6062;
+  background-color: var(--decor-primary);
 
-  color: white;
+  color: var(--bg);
 }
 
 #gallery_title2::before,
@@ -528,7 +624,7 @@ footer ul li button:hover {
 #gallery_title2::before {
   width: 110%;
   height: 110%;
-  background-color: #be9597;
+  background-color: var(--decor-secondary);
   border-radius: 56% 44% 56% 44% / 49% 52% 48% 51%;
   z-index: -1;
 }
@@ -536,7 +632,7 @@ footer ul li button:hover {
 #gallery_title2::after {
   width: 125%;
   height: 125%;
-  background-color: #dabebf;
+  background-color: var(--decor-tertiary);
   border-radius: 54% 46% 53% 47% / 41% 49% 51% 59%;
   z-index: -2;
 }
@@ -546,14 +642,14 @@ footer ul li button:hover {
    ========================================================== */
 
 .context {
-  background-color: #eae1e1d3;
+  background-color: var(--surface-muted);
   margin-top: clamp(3rem, 6vw, 6rem);
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 3rem clamp(1rem, 5%, 3rem);
 
-  outline: 4px solid #eae1e1d3;
+  outline: 4px solid var(--surface-muted);
   outline-offset: 0.5rem;
 }
 
@@ -581,7 +677,7 @@ footer ul li button:hover {
 
 .organic-video {
   border-radius: 44% 56% 55% 45% / 49% 47% 53% 51%;
-  border: 2px solid #c68e7e;
+  border: 2px solid var(--border);
   padding: 0.5rem;
   flex-shrink: 0;
   width: clamp(20rem, 40vw, 45rem);
@@ -611,10 +707,10 @@ footer ul li button:hover {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: white;
+  color: var(--bg);
   font-size: 3rem;
   opacity: 0.8;
-  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  text-shadow: var(--glow);
   transition: opacity 0.2s ease;
 }
 
@@ -643,13 +739,13 @@ footer ul li button:hover {
 
 #video-lightbox {
   border: none;
-  background: rgba(0, 0, 0, 0.9);
+  background: var(--overlay-modal);
   padding: 2rem;
   max-width: 95vw;
 }
 
 #video-lightbox::backdrop {
-  background: rgba(0, 0, 0, 0.8);
+  background: var(--overlay-dark-strong);
 }
 
 #video-lightbox iframe {
@@ -664,7 +760,7 @@ footer ul li button:hover {
   right: 0.75rem;
   background: none;
   border: none;
-  color: white;
+  color: var(--bg);
   font-size: clamp(1.5rem, 3vw, 2.5rem);
   cursor: pointer;
   opacity: 0.5;
@@ -687,8 +783,7 @@ footer ul li button:hover {
 
 .subnav ul {
   display: grid;
-  grid-template-columns: repeat(3,
-      1fr);
+  grid-template-columns: repeat(3, 1fr);
   /* grid-system with 3 columns for each navigation */
   gap: clamp(0rem, 2vw, 3rem);
   justify-content: center;
@@ -702,7 +797,7 @@ footer ul li button:hover {
 
 .subnav a {
   margin-top: 1rem;
-  color: #7a5254;
+  color: var(--heading);
   font-size: clamp(1rem, 2vw, 1.3rem);
 }
 
@@ -810,6 +905,7 @@ footer ul li button:hover {
   overflow: hidden;
 }
 
+
 #gallery-abstract-list li a {
   display: block;
   width: 100%;
@@ -827,7 +923,7 @@ footer ul li button:hover {
 .gallery-overlay {
   position: absolute;
   inset: 0;
-  background: rgba(31, 20, 16, 0.55);
+  background: var(--image-overlay);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -839,7 +935,7 @@ footer ul li button:hover {
 .gallery-overlay span {
   font-family: "Cormorant Garamond";
   font-size: clamp(2rem, 2.5vw, 4rem);
-  color: white;
+  color: var(--bg);
 }
 
 #gallery-abstract-list li:hover .gallery-overlay {
@@ -862,24 +958,23 @@ footer ul li button:hover {
     left: 0;
     right: 0;
     padding: 0.4rem 0.6rem;
-    background: rgba(155, 115, 117, 0.35);
+    background: var(--glass-bg);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
-    border-top: 1px solid rgba(255, 255, 255, 0.25);
+    border-top: 1px solid var(--glass-border);
     text-align: center;
   }
 
   .glass-bar span {
     font-family: "Cormorant Garamond";
     font-size: clamp(1.2rem, 2.5vw, 1.5rem);
-    color: white;
+    color: var(--bg);
   }
 
   #gallery-abstract-list .credited-img figcaption {
     bottom: 3rem;
   }
 }
-
 
 
 /* hide glass bar for desktop */
@@ -964,9 +1059,9 @@ footer ul li button:hover {
   position: absolute;
   bottom: 0.5rem;
   right: 0.5rem;
-  color: rgb(248, 246, 246);
+  color: var(--bg);
   font-size: 0.75rem;
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: var(--overlay-dark);
   padding: 0.2rem 0.5rem;
   border-radius: 4px;
 }
@@ -981,7 +1076,7 @@ footer ul li button:hover {
 
 #lightbox {
   border: none;
-  background: rgba(0, 0, 0, 0.9);
+  background: var(--overlay-modal);
   max-width: 90vw;
   max-height: 90vh;
   padding: 0;
@@ -1001,7 +1096,7 @@ footer ul li button:hover {
 }
 
 #lightbox::backdrop {
-  background: rgba(0, 0, 0, 0.8);
+  background: var(--overlay-dark-strong);
 }
 
 /* Close Button */
@@ -1011,7 +1106,7 @@ footer ul li button:hover {
   right: 0.75rem;
   background: none;
   border: none;
-  color: white;
+  color: var(--bg);
   font-size: clamp(1.5rem, 3vw, 2.5rem);
   cursor: pointer;
   opacity: 0.5;
@@ -1030,7 +1125,7 @@ footer ul li button:hover {
   transform: translateY(-50%);
   background: none;
   border: none;
-  color: white;
+  color: var(--bg);
   font-size: clamp(2rem, 5vw, 4rem);
   cursor: pointer;
   padding: 1rem;
@@ -1062,19 +1157,19 @@ footer ul li button:hover {
   text-align: justify;
   hyphens: auto;
   border-radius: 2%;
-  box-shadow: 0 0 0 2px #c68e7e;
+  box-shadow: 0 0 0 2px var(--border);
 }
 
 .studio-insights-intro {
   width: min(80ch, 80%);
-  background-color: #f3e7e2;
+  background-color: var(--surface-muted);
   margin-inline: auto;
   margin-block: 6rem;
   padding: clamp(1rem, 3vw, 5rem) clamp(2rem, 5vw, 6rem) clamp(2rem, 5vw, 6rem);
 }
 
 .studio-insights article {
-  background-color: #f6efeb;
+  background-color: var(--surface-soft);
   padding: clamp(0.8rem, 2vw, 3rem) clamp(1rem, 2.5vw, 4rem) clamp(1rem, 2.5vw, 4rem);
 }
 
@@ -1132,7 +1227,7 @@ footer ul li button:hover {
   margin-top: clamp(4rem, 8vw, 8rem);
   margin-inline: auto;
   transform: translateX(clamp(6rem, 9vw, 12rem));
-  border: 2px solid #c68e7e;
+  border: 2px solid var(--border);
   padding: 0.5rem;
   flex-shrink: 0;
   border-radius: 63% 37% 44% 56% / 50% 52% 48% 50%;
@@ -1173,7 +1268,7 @@ footer ul li button:hover {
 .about-me-cv li {
   margin-block: 2rem;
   list-style-type: disc;
-  color: #5a3d3e;
+  color: var(--text);
   line-height: 1.8;
   font-size: clamp(1rem, 2vw, 1.3rem);
 }
@@ -1183,7 +1278,7 @@ footer ul li button:hover {
 #education {
   margin-bottom: clamp(3rem, 6vw, 6rem);
   padding-bottom: clamp(2rem, 3vw, 4rem);
-  border-bottom: 6px solid rgba(255, 255, 255, 0.3);
+  border-bottom: 6px solid var(--border-divider);
 }
 
 #about_me_title4 {
@@ -1205,7 +1300,8 @@ footer ul li button:hover {
 }
 
 .contact-form {
-  background-color: white;
+  background-color: var(--surface);
+  box-shadow: var(--shadow-md);
   padding: clamp(2rem, 5vw, 4rem);
   border-radius: 12px;
   max-width: min(37rem, 80%);
@@ -1225,14 +1321,14 @@ footer ul li button:hover {
   display: block;
   margin-bottom: 0.5rem;
   font-weight: 500;
-  color: #6f4e4f;
+  color: var(--text-muted);
   grid-column: auto;
 }
 
 .contact-form input,
 .contact-form textarea {
   padding: 0.75rem;
-  border: 1.5px solid #ddd;
+  border: 1.5px solid var(--border-muted);
   border-radius: 6px;
   font-size: 1rem;
   grid-column: auto;
@@ -1246,8 +1342,8 @@ footer ul li button:hover {
 .contact-form button {
   grid-column: 1 / -1;
   padding: 1rem;
-  background-color: #8f5a4d;
-  color: white;
+  background-color: var(--accent);
+  color: var(--bg);
   border: none;
   border-radius: 6px;
   cursor: pointer;
@@ -1255,7 +1351,7 @@ footer ul li button:hover {
 }
 
 .contact-form button:hover {
-  background-color: #704438;
+  background-color: var(--accent-hover);
 }
 
 /* Mobile */
@@ -1286,7 +1382,7 @@ footer ul li button:hover {
 }
 
 .policy-text li {
-  color: #6f4e4f;
+  color: var(--text);
   line-height: 1.8;
   font-size: clamp(1rem, 2vw, 1.3rem);
   margin-bottom: 0.5rem;
@@ -1325,7 +1421,7 @@ footer ul li button:hover {
 .error-code {
   font-size: clamp(12rem, 18vw, 24rem);
   margin: 0;
-  color: #b17264;
+  color: var(--accent-soft);
   line-height: 1;
 }
 
@@ -1335,7 +1431,7 @@ footer ul li button:hover {
   font-size: clamp(6rem, 12vw, 12rem);
   margin: 0;
   margin-bottom: 2rem;
-  color: #b17264;
+  color: var(--accent-soft);
   line-height: 1;
 
 }
@@ -1354,22 +1450,22 @@ footer ul li button:hover {
 
   margin-top: 2rem;
   padding: 1rem 1.5rem;
-  background-color: #a46557;
-  color: white;
+  background-color: var(--accent);
+  color: var(--bg);
   border-radius: 999px;
   text-decoration: none;
   transition: background-color 0.2s ease;
 }
 
 .error-button:hover {
-  background-color: #82483b;
+  background-color: var(--accent-hover);
 }
 
 .error-image {
   width: clamp(18rem, 35vw, 40rem);
   aspect-ratio: 1 / 1;
 
-  border: 2px solid #c68e7e;
+  border: 2px solid var(--border);
   padding: 0.5rem;
 }
 

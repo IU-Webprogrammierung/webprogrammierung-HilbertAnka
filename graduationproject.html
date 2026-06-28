@@ -1,111 +1,76 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="preload"
-      href="fonts/montserrat-regular.woff2"
-      as="font"
-      type="font/woff2"
-      crossorigin
-    />
-    <link
-      rel="preload"
-      href="fonts/dancing-script-700.woff2"
-      as="font"
-      type="font/woff2"
-      crossorigin
-    />
-    <link
-      rel="preload"
-      href="fonts/dancing-script-regular.woff2"
-      as="font"
-      type="font/woff2"
-      crossorigin
-    />
-    <link rel="stylesheet" href="styles.css" />
-    <script src="js/main.js" defer></script>
-    <script src="js/i18n.js" defer></script>
-    <title>Anka Hilbert - Scenic Artist</title>
-  </head>
-  <body>
-    <header></header>
 
-    <main id="main">
-      <article class="gallery-text-subpage">
-        <h1 data-i18n="graduation_project_title"></h1>
-        <p data-i18n="graduation_project_intro"></p>
-      </article>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles.css" />
+  <script src="js/i18n.js" defer></script>
+  <script src="js/dark-mode.js" defer></script>
+  <script src="js/main.js" defer></script>
+  <title>Anka Hilbert - Scenic Artist</title>
+</head>
 
-      <ul id="gallery">
-        <li>
-          <img
-            src="images/small/graduation-project/diploma.webp"
-            data-large="images/large/graduation-project/diploma.webp"
-            alt="Theatrical painting of a view from the stage into an abandoned ornate theater, framed by curtains"
-            width="800"
-            height="800"
-          />
-        </li>
-        <li>
-          <img
-            src="images/small/graduation-project/diploma-sketch.webp"
-            data-large="images/large/graduation-project/diploma-sketch.webp"
-            alt="Theatrical painting in progress, charcoal sketch on canvas photographed from above in the studio"
-            width="800"
-            height="800"
-          />
-        </li>
-        <li>
-          <img
-            src="images/small/graduation-project/diploma-inking.webp"
-            data-large="images/large/graduation-project/diploma-inking.webp"
-            alt="Theatrical painting in progress, inking begun on the left curtain, photographed from above in the studio"
-            width="800"
-            height="800"
-          />
-        </li>
-        <li>
-          <img
-            src="images/small/graduation-project/diploma-inking-finish.webp"
-            data-large="images/large/graduation-project/diploma-inking-finish.webp"
-            alt="Theatrical painting in progress, inking completed, photographed from above in the studio"
-            width="800"
-            height="800"
-          />
-        </li>
-        <li>
-          <img
-            src="images/small/graduation-project/diploma-first-colour.webp"
-            data-large="images/large/graduation-project/diploma-first-colour.webp"
-            alt="Theatrical painting in progress, first colors applied, with a paint cart and color pots visible, photographed from above in the studio"
-            width="800"
-            height="800"
-          />
-        </li>
-        <li>
-          <img
-            src="images/small/graduation-project/diploma-colour.webp"
-            data-large="images/large/graduation-project/diploma-colour.webp"
-            alt="Theatrical painting in progress, colors further developed, photographed from above in the studio"
-            width="800"
-            height="800"
-          />
-        </li>
-      </ul>
+<body>
+  <header></header>
+
+  <main id="main">
+    <article class="gallery-text-subpage">
+      <h1 data-i18n="graduation_project_title"></h1>
+      <p data-i18n="graduation_project_intro"></p>
+    </article>
+
+    <ul id="gallery">
+      <li>
+        <img src="images/small/graduation-project/diploma.webp"
+          data-large="images/large/graduation-project/diploma.webp"
+          alt="Theatrical painting of a view from the stage into an abandoned ornate theater, framed by curtains"
+          width="800" height="800" />
+      </li>
+      <li>
+        <img src="images/small/graduation-project/diploma-sketch.webp"
+          data-large="images/large/graduation-project/diploma-sketch.webp"
+          alt="Theatrical painting in progress, charcoal sketch on canvas photographed from above in the studio"
+          width="800" height="800" />
+      </li>
+      <li>
+        <img src="images/small/graduation-project/diploma-inking.webp"
+          data-large="images/large/graduation-project/diploma-inking.webp"
+          alt="Theatrical painting in progress, inking begun on the left curtain, photographed from above in the studio"
+          width="800" height="800" />
+      </li>
+      <li>
+        <img src="images/small/graduation-project/diploma-inking-finish.webp"
+          data-large="images/large/graduation-project/diploma-inking-finish.webp"
+          alt="Theatrical painting in progress, inking completed, photographed from above in the studio" width="800"
+          height="800" />
+      </li>
+      <li>
+        <img src="images/small/graduation-project/diploma-first-colour.webp"
+          data-large="images/large/graduation-project/diploma-first-colour.webp"
+          alt="Theatrical painting in progress, first colors applied, with a paint cart and color pots visible, photographed from above in the studio"
+          width="800" height="800" />
+      </li>
+      <li>
+        <img src="images/small/graduation-project/diploma-colour.webp"
+          data-large="images/large/graduation-project/diploma-colour.webp"
+          alt="Theatrical painting in progress, colors further developed, photographed from above in the studio"
+          width="800" height="800" />
+      </li>
+    </ul>
 
     <dialog id="lightbox">
-        <button class="lightbox-close">✕</button>
-        <button class="lightbox-prev">‹</button>
-        <button class="lightbox-next">›</button>
-        <figure>
-          <img id="lightbox-img" src="" alt="" />
-          <figcaption id="lightbox-credit"></figcaption>
-        </figure>
-      </dialog>
-    </main>
+      <button class="lightbox-close">✕</button>
+      <button class="lightbox-prev">‹</button>
+      <button class="lightbox-next">›</button>
+      <figure>
+        <img id="lightbox-img" src="" alt="" />
+        <figcaption id="lightbox-credit"></figcaption>
+      </figure>
+    </dialog>
+  </main>
 
-    <footer></footer>
-  </body>
+  <footer></footer>
+</body>
+
 </html>

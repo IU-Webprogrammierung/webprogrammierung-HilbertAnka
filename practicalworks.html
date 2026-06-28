@@ -1,140 +1,85 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="preload"
-      href="fonts/montserrat-regular.woff2"
-      as="font"
-      type="font/woff2"
-      crossorigin
-    />
-    <link
-      rel="preload"
-      href="fonts/dancing-script-700.woff2"
-      as="font"
-      type="font/woff2"
-      crossorigin
-    />
-    <link
-      rel="preload"
-      href="fonts/dancing-script-regular.woff2"
-      as="font"
-      type="font/woff2"
-      crossorigin
-    />
-    <link rel="stylesheet" href="styles.css" />
-    <script src="js/main.js" defer></script>
-    <script src="js/i18n.js" defer></script>
-    <title>Anka Hilbert - Scenic Artist</title>
-  </head>
 
-  <body>
-    <header></header>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles.css" />
+  <script src="js/i18n.js" defer></script>
+  <script src="js/dark-mode.js" defer></script>
+  <script src="js/main.js" defer></script>
+  <title>Anka Hilbert - Scenic Artist</title>
+</head>
 
-    <main id="main">
-      <article class="gallery-text-subpage">
-        <h1 data-i18n="practical_works_title"></h1>
-        <p data-i18n="practical_works_intro"></p>
-      </article>
+<body>
+  <header></header>
 
-      <ul id="gallery">
-        <li>
-          <img
-            src="images/small/practical-works/goldimitation.webp"
-            data-large="images/large/practical-works/goldimitation.webp"
-            alt="Theatrical gold imitation painting, ornamental face with chipped surface"
-            width="800"
-            height="800"
-          />
-        </li>
+  <main id="main">
+    <article class="gallery-text-subpage">
+      <h1 data-i18n="practical_works_title"></h1>
+      <p data-i18n="practical_works_intro"></p>
+    </article>
 
-        <li>
-          <img
-            src="images/small/practical-works/degas-ballerina.webp"
-            data-large="images/large/practical-works/degas-ballerina.webp"
-            alt="Theatrical painting of Degas' ballerina against a silk wallpaper background"
-            width="800"
-            height="800"
-          />
-        </li>
-        <li>
-          <img
-            src="images/small/practical-works/graphic-Horst-Janssen.webp"
-            data-large="images/large/practical-works/graphic-Horst-Janssen.webp"
-            alt="Theatrical painting after Horst Janssen's etching 'Selbst als Angler'"
-            width="800"
-            height="800"
-          />
-        </li>
-        <li>
-          <img
-            src="images/small/practical-works/landscape.webp"
-            data-large="images/large/practical-works/landscape.webp"
-            alt="Theatrical painting of a landscape with trees, a pond and a small jetty"
-            width="800"
-            height="800"
-          />
-        </li>
-        <li>
-          <img
-            src="images/small/practical-works/venice-architecture.webp"
-            data-large="images/large/practical-works/venice-architecture.webp"
-            alt="Black and white theatrical painting of Venetian architecture with a row of buildings, a boat and water"
-            width="800"
-            height="800"
-          />
-        </li>
-        <li>
-          <img
-            src="images/small/practical-works/fresco.webp"
-            data-large="images/large/practical-works/fresco.webp"
-            alt="Theatrical painting of a weathered fresco depicting an angel playing a lute"
-            width="800"
-            height="800"
-          />
-        </li>
-        <li>
-          <img
-            src="images/small/practical-works/scrim.webp"
-            data-large="images/large/practical-works/scrim.webp"
-            alt="Theatrical painting of an Indian railway platform at sunset with figures, one reading a newspaper, another carrying luggage on their head"
-            width="800"
-            height="800"
-          />
-        </li>
-        <li>
-          <img
-            src="images/small/practical-works/capital.webp"
-            data-large="images/large/practical-works/capital.webp"
-            alt="Theatrical painting of a Corinthian capital in stone tones against a muted background"
-            width="800"
-            height="800"
-          />
-        </li>
-        <li>
-          <img
-            src="images/small/practical-works/rust.webp"
-            data-large="images/large/practical-works/rust.webp"
-            alt="Theatrical painting of a rusty gear and chain in green and reddish tones with peeling paint"
-            width="800"
-            height="800"
-          />
-        </li>
-      </ul>
+    <ul id="gallery">
+      <li>
+        <img src="images/small/practical-works/goldimitation.webp"
+          data-large="images/large/practical-works/goldimitation.webp"
+          alt="Theatrical gold imitation painting, ornamental face with chipped surface" width="800" height="800" />
+      </li>
 
-      <dialog id="lightbox">
-        <button class="lightbox-close">✕</button>
-        <button class="lightbox-prev">‹</button>
-        <button class="lightbox-next">›</button>
-        <figure>
-          <img id="lightbox-img" src="" alt="" />
-          <figcaption id="lightbox-credit"></figcaption>
-        </figure>
-      </dialog>
-    </main>
+      <li>
+        <img src="images/small/practical-works/degas-ballerina.webp"
+          data-large="images/large/practical-works/degas-ballerina.webp"
+          alt="Theatrical painting of Degas' ballerina against a silk wallpaper background" width="800" height="800" />
+      </li>
+      <li>
+        <img src="images/small/practical-works/graphic-Horst-Janssen.webp"
+          data-large="images/large/practical-works/graphic-Horst-Janssen.webp"
+          alt="Theatrical painting after Horst Janssen's etching 'Selbst als Angler'" width="800" height="800" />
+      </li>
+      <li>
+        <img src="images/small/practical-works/landscape.webp" data-large="images/large/practical-works/landscape.webp"
+          alt="Theatrical painting of a landscape with trees, a pond and a small jetty" width="800" height="800" />
+      </li>
+      <li>
+        <img src="images/small/practical-works/venice-architecture.webp"
+          data-large="images/large/practical-works/venice-architecture.webp"
+          alt="Black and white theatrical painting of Venetian architecture with a row of buildings, a boat and water"
+          width="800" height="800" />
+      </li>
+      <li>
+        <img src="images/small/practical-works/fresco.webp" data-large="images/large/practical-works/fresco.webp"
+          alt="Theatrical painting of a weathered fresco depicting an angel playing a lute" width="800" height="800" />
+      </li>
+      <li>
+        <img src="images/small/practical-works/scrim.webp" data-large="images/large/practical-works/scrim.webp"
+          alt="Theatrical painting of an Indian railway platform at sunset with figures, one reading a newspaper, another carrying luggage on their head"
+          width="800" height="800" />
+      </li>
+      <li>
+        <img src="images/small/practical-works/capital.webp" data-large="images/large/practical-works/capital.webp"
+          alt="Theatrical painting of a Corinthian capital in stone tones against a muted background" width="800"
+          height="800" />
+      </li>
+      <li>
+        <img src="images/small/practical-works/rust.webp" data-large="images/large/practical-works/rust.webp"
+          alt="Theatrical painting of a rusty gear and chain in green and reddish tones with peeling paint" width="800"
+          height="800" />
+      </li>
+    </ul>
 
-    <footer></footer>
-  </body>
+    <dialog id="lightbox">
+      <button class="lightbox-close">✕</button>
+      <button class="lightbox-prev">‹</button>
+      <button class="lightbox-next">›</button>
+      <figure>
+        <img id="lightbox-img" src="" alt="" />
+        <figcaption id="lightbox-credit"></figcaption>
+      </figure>
+    </dialog>
+  </main>
+
+  <footer></footer>
+</body>
+
 </html>
