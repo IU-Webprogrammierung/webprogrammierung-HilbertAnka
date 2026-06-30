@@ -33,6 +33,9 @@ function setLanguage(lang) {
 function updateLanguageButton() {
   const button = document.getElementById("language-switch");
 
+  if (!button) return;
+
+
   // reset classes
   button.classList.remove("en", "de");
 
