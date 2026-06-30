@@ -164,7 +164,7 @@ img {
      Text (mehr Papiergefühl, weniger grau)
      ================== */
 
-  --heading: #f0e3dd;
+  --heading: #e8d9d2;
   --text: #dcc8c0;
   --text-muted: #b39f98;
 
@@ -1090,7 +1090,7 @@ footer ul li button:hover {
   height: 100%;
 }
 
-#gallery img, 
+#gallery img,
 #gallery-abstract-list img {
   width: 100%;
   height: 100%;
@@ -1213,7 +1213,7 @@ footer ul li button:hover {
 
   .gallery-abstract ul,
   #gallery {
-  margin-inline: clamp(2.5rem, 8vw, 10rem);
+    margin-inline: clamp(2.5rem, 8vw, 10rem);
   }
 }
 
@@ -1326,7 +1326,7 @@ footer ul li button:hover {
    STUDIO INSIGHTS (studioinsights.html)
    ========================================================== */
 
-   .studio-insights {
+.studio-insights {
   padding-inline: clamp(3rem, 6vw, 6rem);
 }
 
