@@ -42,10 +42,6 @@
   box-sizing: border-box;
 }
 
-body {
-  font-display: swap;
-}
-
 ul,
 ol {
   list-style: none;

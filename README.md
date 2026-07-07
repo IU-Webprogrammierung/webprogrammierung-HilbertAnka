@@ -3,9 +3,10 @@
 ## 🌐 Live Demo: [Live Website ansehen](https://iu-webprogrammierung.github.io/webprogrammierung-HilbertAnka/)
 ---
 
-## ⭐ Bewertungsrelevante Leistungen 
+## 🐝 Bewertungsrelevante Leistungen 
 
 - **Mehrsprachigkeit (DE/EN)** durch JSON-basierte Internationalisierung und persistente Sprachwahl via `localStorage`
+- **Dark Mode**
 - **Wiederverwendbare UI-Komponenten** (Header & Footer) mit konsistenter Gestaltung
 - **Navigation mit Dropdown-System** sowie mobiler Hamburger-Navigation inkl. JavaScript-Interaktion und State Handling (Smartphoneversion)
 - **JavaScript Lightbox-System** mit Navigation (Keyboard Support, Next/Prev)
@@ -13,6 +14,8 @@
 - **Weboptimierte Medien** durch WebP-Formate und eingebettetes YouTube-Video
 - **Formular mit HTML5-Validierung** (required & E-Mail-Typ)
 - **individuelle 404-Seite**
+- **Favicon**
+- Nutzung von **git-branches** in der 3. Projektphase, sowie **Git-Tags** pro Projektphase
 
 ---
 
