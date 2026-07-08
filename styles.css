@@ -275,6 +275,7 @@ main {
    ========================================================== */
 
 header {
+  min-height: 120px;
   position: sticky;
   /* sticky header stays on top while scrolling */
   top: 0;
@@ -309,6 +310,12 @@ header ul li a:hover {
 ul li a.active {
   background-color: transparent;
   border-bottom-color: var(--surface-active);
+}
+
+@media (max-width: 767px) {
+  header {
+    min-height: 83px;
+  }
 }
 
 /* ==========================================================
@@ -584,6 +591,7 @@ ul li a.active {
    ========================================================== */
 
 footer {
+  min-height: 135px; 
   padding-block: clamp(1rem, 3vw, 3rem);
 }
 
@@ -607,6 +615,11 @@ footer ul li button:hover {
   border-bottom-color: var(--surface-hover);
 }
 
+@media (max-width: 767px) {
+   footer {
+    min-height: 80px;
+  }
+}
 
 
 /* ==========================================================
