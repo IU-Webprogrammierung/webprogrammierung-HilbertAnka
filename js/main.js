@@ -69,7 +69,25 @@ loadComponent("header", "components/header.html").then(() => {
 });
 
 // load footer component
-loadComponent("footer", "components/footer.html");
+loadComponent("footer", "components/footer.html").then(() => {
+  
+  // back-to-top Button
+  const backToTopButton = document.getElementById("back-to-top");
+
+  // show back-to-top button after scrolling down 400px, hide when near the top again
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 400) {
+      backToTopButton.classList.add("visible");
+    } else {
+      backToTopButton.classList.remove("visible");
+    }
+  });
+
+  // scroll back to top on click
+  backToTopButton.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+});
 
 async function loadComponent(selector, file) {
   const response = await fetch(file);
@@ -186,3 +204,59 @@ if (videoOpen && videoLightbox && videoIframe) {
     }
   });
 }
+
+
+// ===============================================================
+// Scroll Animation
+// ===============================================================
+
+
+
+// Scale gallery link based on scroll position (small -> big -> small)
+const galleryTitleWrapper = document.querySelector(".gallery-nav");
+
+function updateGalleryTitleScale() {
+  if (!galleryTitleWrapper) return;
+
+  const rect = galleryTitleWrapper.getBoundingClientRect();
+  const viewportCenter = window.innerHeight / 2;
+  const elementCenter = rect.top + rect.height / 2;
+
+  const distance = Math.abs(viewportCenter - elementCenter);
+  const maxDistance = window.innerHeight / 2 + rect.height / 2;
+  const progress = Math.min(distance / maxDistance, 1);
+
+  const minScale = 0.7;
+  const maxScale = 1.15;
+  const scale = maxScale - progress * (maxScale - minScale);
+
+  galleryTitleWrapper.style.transform = `scale(${scale})`;
+}
+
+window.addEventListener("scroll", updateGalleryTitleScale);
+window.addEventListener("resize", updateGalleryTitleScale);
+updateGalleryTitleScale();
+
+
+
+
+// Scroll reveal animation for subnav items
+const revealElements = document.querySelectorAll(".subnav li");
+
+const revealObserver = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("revealed");
+        // stop observing once revealed, animation only runs once
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  },
+  {
+    threshold: 0.3, // triggers once 30% of the element is visible
+    rootMargin: "0px 0px -100px 0px",
+  }
+);
+
+revealElements.forEach((el) => revealObserver.observe(el));

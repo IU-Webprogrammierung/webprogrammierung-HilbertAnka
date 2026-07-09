@@ -10,12 +10,6 @@
   font-display: swap;
 }
 
-@font-face {
-  font-family: "Montserrat";
-  src: url("./fonts/montserrat-700.woff2") format("woff2");
-  font-weight: 700;
-  font-display: swap;
-}
 
 /* Cormorant Garamond */
 @font-face {
@@ -53,6 +47,18 @@ img {
   max-width: 100%;
   height: auto;
 }
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* respect user preference for reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
 
 
 /* ==========================================================
@@ -528,6 +534,7 @@ ul li a.active {
     text-align: center;
   }
 }
+
 /* ==========================================================
    Dropdown-Gallery
    ========================================================== */
@@ -584,7 +591,7 @@ ul li a.active {
 /* mobile: always visible when menu is open */
 @media (max-width: 767px) {
 
-    .has-dropdown-gallery {
+  .has-dropdown-gallery {
     flex-direction: column;
     align-items: stretch;
   }
@@ -614,8 +621,9 @@ ul li a.active {
   background: none;
   border: none;
   cursor: pointer;
-   padding: 0.6rem 0.8rem 0.6rem 0.2rem;
-  display: none; /* standardmäßig versteckt (Desktop & Mobile) */
+  padding: 0.6rem 0.8rem 0.6rem 0.2rem;
+  display: none;
+  /* standardmäßig versteckt (Desktop & Mobile) */
   align-items: center;
   justify-content: center;
 }
@@ -648,7 +656,7 @@ ul li a.active {
    ========================================================== */
 
 footer {
-  min-height: 135px; 
+  min-height: 135px;
   padding-block: clamp(1rem, 3vw, 3rem);
 }
 
@@ -673,9 +681,47 @@ footer ul li button:hover {
 }
 
 @media (max-width: 767px) {
-   footer {
+  footer {
     min-height: 80px;
   }
+}
+
+/* ==========================================================
+   Back-to-top Button
+   ========================================================== */
+
+#back-to-top {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  border: 1px solid var(--border-divider);
+  background: var(--surface-elevated);
+  color: var(--text);
+  font-size: 1.3rem;
+  cursor: pointer;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
+  z-index: 90;
+}
+
+#back-to-top.visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+#back-to-top:hover {
+  background: var(--surface-hover);
 }
 
 
@@ -814,8 +860,8 @@ footer ul li button:hover {
   justify-content: center;
   align-items: center;
   height: 60vh;
-  margin-top: clamp(3rem, 6vw, 6rem);
-  margin-bottom: clamp(3rem, 6vw, 6rem);
+  margin-top: clamp(5rem, 10vw, 10rem);
+  margin-bottom: clamp(5rem, 10vw, 10rem);
   position: relative;
   z-index: 1;
 }
@@ -835,6 +881,8 @@ footer ul li button:hover {
 
   border-radius: 60% 40% 53% 47% / 54% 57% 43% 46%;
   background-color: var(--decor-primary);
+
+
 
 }
 
@@ -862,6 +910,8 @@ footer ul li button:hover {
   border-radius: 54% 46% 53% 47% / 41% 49% 51% 59%;
   z-index: -2;
 }
+
+
 
 /* ==========================================================
    "Scenery Painting"-Text of index.html
@@ -925,7 +975,7 @@ footer ul li button:hover {
 .organic-video img {
   border-radius: 44% 56% 55% 45% / 49% 47% 53% 51%;
   width: 100%;
-    height: auto;
+  height: auto;
   aspect-ratio: 16 / 14;
   object-fit: cover;
 }
@@ -1116,6 +1166,50 @@ footer ul li button:hover {
     height: clamp(12rem, 40vw, 20rem);
   }
 }
+
+
+/* ==========================================================
+   Scroll Reveal Animation (subnav)
+   ========================================================== */
+
+.subnav li {
+  opacity: 0;
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.subnav li.reveal-left {
+  transform: translateX(-6rem);
+}
+
+.subnav li.reveal-right {
+  transform: translateX(6rem);
+}
+
+.subnav li.reveal-up {
+  transform: translateY(6rem);
+}
+
+
+@media (max-width: 767px) {
+
+  .subnav li.reveal-up {
+    transform: translateX(6rem);
+  }
+
+  .subnav li.reveal-right {
+    transform: translateX(-6rem);
+  }
+
+
+}
+
+/* once revealed, all end up in their natural position */
+.subnav li.revealed {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+
 
 /* ==========================================================
    GALLERY (gallery.html)
@@ -1574,7 +1668,7 @@ footer ul li button:hover {
 .contact-form label {
   display: block;
   margin-bottom: 0.5rem;
-  font-weight: 500;
+  font-weight: 400;
   color: var(--text-muted);
   grid-column: auto;
 }

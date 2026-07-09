@@ -6,12 +6,15 @@
 ## 🐝 Bewertungsrelevante Leistungen 
 
 - **Mehrsprachigkeit (DE/EN)** durch JSON-basierte Internationalisierung und persistente Sprachwahl via `localStorage`
-- **Dark Mode**
+- **Dark Mode** mit CSS-Variablen für alle Farbwerte sowie persistenter Theme-Auswahl via `localStorage`
 - **Wiederverwendbare UI-Komponenten** (Header & Footer) mit konsistenter Gestaltung
-- **Navigation mit Dropdown-System** sowie mobiler Hamburger-Navigation inkl. JavaScript-Interaktion und State Handling (Smartphoneversion)
+- **Navigation mit Dropdown-System** (inkl. Toggle-Button für Tablet-Ansicht) sowie mobiler Hamburger-Navigation mit JavaScript-Interaktion und State Handling
 - **JavaScript Lightbox-System** mit Navigation (Keyboard Support, Next/Prev)
-- **Interaktive UI-Elemente** (Hover States ...)
+- **Interaktive UI-Elemente**: visuelles Feedback bei Hover (z. B. Farbänderung bei Buttons, Unterstrich in der Navigation, leichte Bewegung bei Bildern)
+- **Smooth Scrolling** sowie **Back-to-top-Button** mit Sichtbarkeits-Logik beim Scrollen
+- **Scroll-Animationen**: Scale-Effekt (Größenänderung abhängig von Scroll-Position) sowie Reveal-Animationen einzelner nav-elemente (index.html)
 - **Weboptimierte Medien** durch WebP-Formate und eingebettetes YouTube-Video
+- **Responsive Bildgrößen** via `srcset`/`sizes`: je Bild bis zu 3 Auflösungsstufen (400/800/1600px)
 - **Formular mit HTML5-Validierung** (required & E-Mail-Typ)
 - **individuelle 404-Seite**
 - **Favicon**
