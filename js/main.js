@@ -57,12 +57,16 @@ loadComponent("header", "components/header.html").then(() => {
   const toggle = document.getElementById("menu-toggle");
   const navList = document.getElementById("navigation-list");
 
-  toggle.addEventListener("click", () => {
-    toggle.classList.toggle("open");
-    navList.classList.toggle("open");
-    toggle.setAttribute("aria-expanded", navList.classList.contains("open"));
-  });
+toggle.addEventListener("click", () => {
+  toggle.classList.toggle("open");
+  navList.classList.toggle("open");
 
+  const isOpen = navList.classList.contains("open");
+
+  toggle.setAttribute("aria-expanded", isOpen);
+
+  document.body.classList.toggle("menu-open", isOpen);
+});
   initThemeToggle();
 
   loadLanguage(currentLanguage);

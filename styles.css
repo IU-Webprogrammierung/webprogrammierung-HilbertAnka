@@ -512,9 +512,16 @@ ul li a.active {
     width: 100%;
   }
 
-  #navigation-list.open {
-    display: flex;
-  }
+#navigation-list.open {
+  display: flex;
+  flex-direction: column;
+
+  max-height: calc(100dvh - 83px);
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+
+  justify-content: flex-start;
+}
 }
 
 .dropdown-gallery a {
