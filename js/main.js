@@ -32,6 +32,27 @@ loadComponent("header", "components/header.html").then(() => {
     }
   });
 
+  // dropdown-Toggle for gallery-navigation (tablet)
+  const dropdownToggle = document.querySelector(".dropdown-toggle");
+  const dropdownGallery = document.querySelector(".dropdown-gallery");
+
+  dropdownToggle.addEventListener("click", (e) => {
+    e.stopPropagation();
+
+    const isOpen = dropdownGallery.classList.toggle("open"); //(true = now open, false = now closed)
+    dropdownToggle.setAttribute("aria-expanded", isOpen); //keeps aria-expanded state in sync for screen readers
+  });
+
+  // close dropdown
+  document.addEventListener("click", (e) => {
+    if (!e.target.closest(".has-dropdown-gallery")) {
+      dropdownGallery.classList.remove("open");
+      dropdownToggle.setAttribute("aria-expanded", "false");
+    }
+  });
+
+
+
   // hamburger-button
   const toggle = document.getElementById("menu-toggle");
   const navList = document.getElementById("navigation-list");
@@ -154,14 +175,14 @@ if (videoOpen && videoLightbox && videoIframe) {
   });
 
 
-// close video lightbox
-videoLightbox.addEventListener("click", (e) => {
-  if (
-    e.target === videoLightbox ||
-    e.target.classList.contains("video-close")
-  ) {
-    videoIframe.src = ""; // video stop when lightbox closed
-    videoLightbox.close();
-  }
-});
+  // close video lightbox
+  videoLightbox.addEventListener("click", (e) => {
+    if (
+      e.target === videoLightbox ||
+      e.target.classList.contains("video-close")
+    ) {
+      videoIframe.src = ""; // video stop when lightbox closed
+      videoLightbox.close();
+    }
+  });
 }
