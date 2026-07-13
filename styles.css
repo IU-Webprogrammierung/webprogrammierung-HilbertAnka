@@ -764,12 +764,15 @@ footer ul li button:hover {
   padding: 2rem 3rem;
 }
 
-.hero-text p {
+.hero-text p,
+.hero-text h1,
+.hero-text h2 {
   text-align: left;
   padding-right: clamp(1rem, 6vw, 8rem);
 }
 
-.hero-text-2 p {
+.hero-text-2 p,
+.hero-text-2 h2  {
   text-align: right;
   padding-left: clamp(0rem, 2vw, 4rem);
 }
