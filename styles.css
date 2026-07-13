@@ -48,6 +48,11 @@ img {
   height: auto;
 }
 
+article p {
+  text-align: justify;
+  hyphens: auto;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -512,16 +517,16 @@ ul li a.active {
     width: 100%;
   }
 
-#navigation-list.open {
-  display: flex;
-  flex-direction: column;
+  #navigation-list.open {
+    display: flex;
+    flex-direction: column;
 
-  max-height: calc(100dvh - 83px);
-  overflow-y: auto;
-  -webkit-overflow-scrolling: touch;
+    max-height: calc(100dvh - 83px);
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
 
-  justify-content: flex-start;
-}
+    justify-content: flex-start;
+  }
 }
 
 .dropdown-gallery a {
@@ -759,12 +764,12 @@ footer ul li button:hover {
   padding: 2rem 3rem;
 }
 
-.hero-text {
+.hero-text p {
   text-align: left;
   padding-right: clamp(1rem, 6vw, 8rem);
 }
 
-.hero-text-2 {
+.hero-text-2 p {
   text-align: right;
   padding-left: clamp(0rem, 2vw, 4rem);
 }
@@ -850,8 +855,6 @@ footer ul li button:hover {
 
   .hero-text,
   .hero-text-2 {
-    text-align: justify;
-    hyphens: auto;
     padding: 1rem;
     padding-right: clamp(1rem, 7%, 14%);
     padding-left: clamp(1rem, 7%, 14%);
@@ -937,8 +940,6 @@ footer ul li button:hover {
 }
 
 .context-text {
-  text-align: justify;
-  hyphens: auto;
   padding-top: 1.5rem;
   padding-bottom: 3.5rem;
   padding-left: clamp(1rem, 10%, 10rem);
@@ -1224,8 +1225,6 @@ footer ul li button:hover {
 
 .gallery-text,
 .gallery-text-subpage {
-  text-align: justify;
-  hyphens: auto;
   margin-inline: auto;
   padding-top: clamp(0rem, 0.75vw, 1.5rem);
   padding-bottom: clamp(0rem, 0.5vw, 1rem);
@@ -1499,12 +1498,21 @@ footer ul li button:hover {
 }
 
 .studio-insights-intro {
-  width: min(80ch, calc(100% - 2rem));
   margin-inline: auto;
-  margin-top: 6rem;
-  padding-bottom: clamp(3rem, 5vw, 6rem);
-  border-bottom: 3px solid var(--border-divider);
+  padding-top: clamp(0rem, 0.75vw, 1.5rem);
+  padding-bottom: clamp(0rem, 0.5vw, 1rem);
+  padding-left: clamp(1rem, 10%, 10rem);
+  padding-right: clamp(1rem, 10%, 10rem);
+  width: min(125ch, 100%);
 }
+
+.studio-insights-intro p:last-child {
+  border-bottom: 3px solid var(--border-divider);
+  padding-bottom: clamp(3rem, 4vw, 5rem);
+}
+
+
+
 
 .studio-insights ul {
   display: flex;
@@ -1544,8 +1552,6 @@ footer ul li button:hover {
 }
 
 .studio-insights article {
-  text-align: justify;
-  hyphens: auto;
   border-radius: 5px;
   border: 1px solid var(--border-muted);
   background-color: var(--surface-soft);
@@ -1606,8 +1612,6 @@ footer ul li button:hover {
 
 .about-me-text,
 .about-me-cv {
-  text-align: justify;
-  hyphens: auto;
   margin-inline: auto;
   padding-top: 1.5rem;
   padding-bottom: clamp(1rem, 2vw, 3rem);
@@ -1644,8 +1648,6 @@ footer ul li button:hover {
    CONTACT (contact.html)
    ========================================================== */
 .contact-text {
-  text-align: justify;
-  hyphens: auto;
   margin-inline: auto;
   margin-block: clamp(4rem, 8vw, 8rem);
 
@@ -1721,8 +1723,6 @@ footer ul li button:hover {
    ========================================================== */
 .imprint-text,
 .policy-text {
-  text-align: justify;
-  hyphens: auto;
   margin-inline: auto;
   margin-block: clamp(4rem, 8vw, 8rem);
 
