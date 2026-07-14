@@ -45,6 +45,7 @@
 
 ## 📁 Projektstruktur
 
+```
 ├── index.html
 ├── gallery.html
 ├── practicalworks.html, graduationproject.html, sleepingbeauty.html,
@@ -70,3 +71,4 @@
 │   └── small/
 ├── fonts/
 └── favicon.ico, favicon.svg, apple-touch-icon.png
+```
