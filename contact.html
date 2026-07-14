@@ -4,12 +4,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
   <link rel="icon" type="image/svg+xml" href="favicon.svg" />
   <link rel="icon" type="image/x-icon" href="favicon.ico" />
   <link rel="apple-touch-icon" href="apple-touch-icon.png" />
 
   <link rel="stylesheet" href="styles.css" />
+
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
   <script src="js/i18n.js" defer></script>
   <script src="js/dark-mode.js" defer></script>
   <script src="js/main.js" defer></script>
@@ -19,36 +21,41 @@
 <body>
   <header></header>
 
-  <main id="main">
-    <section class="contact-section">
-      <article class="contact-text">
-        <h1 data-i18n="contact_title"></h1>
-        <p data-i18n="contact_intro1"></p>
-        <p data-i18n="contact_intro2"></p>
+  <main id="main" class="w-full">
+    <section class="contact-section mx-auto w-9/10 px-4 py-6 md:max-w-3/4">
+      <article class="contact-text py-4">
+        <h1 data-i18n="contact_title" class="my-4"></h1>
+        <p data-i18n="contact_intro1" class="my-4"></p>
+        <p data-i18n="contact_intro2" class="my-4"></p>
       </article>
 
       <section id="contact-form-section">
-        <form class="contact-form" id="contact-form">
-          <fieldset>
-            <label for="first-name" data-i18n="label_first_name"></label>
-            <input type="text" id="first-name" name="first-name" required />
+        <form class="contact-form mx-auto my-8 max-w-9/10 rounded-lg p-10 shadow-[var(--shadow-md)] md:max-w-2xl"
+          id="contact-form">
+          <fieldset class="grid grid-cols-1 gap-4 md:grid-cols-2">
+            <label for="first-name" data-i18n="label_first_name" class="mb-4 block text-[var(--text-muted)]"></label>
+            <input type="text" id="first-name" name="first-name" required
+              class="col-auto rounded-md border-1 border-solid border-[var(--border-muted)] bg-white p-1" />
 
-            <label for="last-name" data-i18n="label_last_name"></label>
-            <input type="text" id="last-name" name="last-name" required />
+            <label for="last-name" data-i18n="label_last_name" class="mb-4 block text-[var(--text-muted)]"></label>
+            <input type="text" id="last-name" name="last-name" required
+              class="col-auto rounded-md border-1 border-solid border-[var(--border-muted)] bg-white p-1" />
 
-            <label for="email" data-i18n="label_email"></label>
-            <input type="email" id="email" name="email" required />
+            <label for="email" data-i18n="label_email" class="mb-4 block text-[var(--text-muted)]"></label>
+            <input type="email" id="email" name="email" required
+              class="col-auto rounded-md border-1 border-solid border-[var(--border-muted)] bg-white p-1" />
 
-            <label for="message" data-i18n="label_message"></label>
-            <textarea id="message" name="message" rows="8" required></textarea>
+            <label for="message" data-i18n="label_message" class="mb-4 block text-[var(--text-muted)]"></label>
+            <textarea id="message" name="message" rows="8" required
+              class="col-span-full rounded-md border-1 border-solid border-[var(--border-muted)] bg-white p-1"></textarea>
 
-            <button type="submit" data-i18n="contact_button"></button>
+            <button type="submit" data-i18n="contact_button"
+              class="col-span-full rounded-md bg-[var(--accent)] p-3 text-[var(--bg)]"></button>
           </fieldset>
         </form>
       </section>
     </section>
   </main>
-
 
 
   <footer></footer>

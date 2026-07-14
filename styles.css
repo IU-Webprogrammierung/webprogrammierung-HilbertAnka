@@ -1657,7 +1657,7 @@ footer ul li button:hover {
 
 /* ==========================================================
    CONTACT (contact.html)
-   ========================================================== */
+ 
 .contact-text {
   margin-inline: auto;
   margin-block: clamp(4rem, 8vw, 8rem);
@@ -1704,7 +1704,7 @@ footer ul li button:hover {
 
 #message {
   grid-column: 1 / -1;
-  /* span both columns */
+  /* span both columns 
 }
 
 .contact-form button {
@@ -1722,12 +1722,14 @@ footer ul li button:hover {
   background-color: var(--accent-hover);
 }
 
-/* Mobile */
+/* Mobile 
 @media (max-width: 767px) {
   .contact-form fieldset {
     grid-template-columns: 1fr;
   }
 }
+
+  ========================================================== */
 
 /* ==========================================================
    IMPRINT & POLICY (imprintpolicy.html)
