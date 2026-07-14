@@ -19,6 +19,7 @@
 - **individuelle 404-Seite**
 - **Favicon**
 - Nutzung von **git-branches** in der 3. Projektphase, sowie **Git-Tags** pro Projektphase
+- **Tailwind CSS** probeweise auf `contact.html` angewendet (Branch: `tailwind-experiment`) – da viele Styles (z.B. `h1`, `p`) global definiert sind, wäre eine vollständige Umstellung aufwendiger, daher bleibt es beim Ausprobieren, der Branch wird nicht gemerged
 
 ---
 
@@ -39,3 +40,33 @@
 - **About Me**: CV, Foto
 - **Contact**: Kontaktformular
 - **Impressum & Datenschutz**: Informationen zur Verantwortlichkeit und Datenverarbeitung
+
+---
+
+## 📁 Projektstruktur
+
+├── index.html
+├── gallery.html
+├── practicalworks.html, graduationproject.html, sleepingbeauty.html,
+│   architecture.html, translucent.html, fauxfinishes.html, various.html
+├── studioinsights.html
+├── aboutme.html
+├── contact.html
+├── imprintpolicy.html
+├── 404.html
+├── styles.css
+├── components/
+│   ├── header.html
+│   └── footer.html
+├── js/
+│   ├── i18n.js
+│   ├── dark-mode.js
+│   └── main.js
+├── lang/
+│   ├── de.json
+│   └── en.json
+├── images/
+│   ├── large/
+│   └── small/
+├── fonts/
+└── favicon.ico, favicon.svg, apple-touch-icon.png
