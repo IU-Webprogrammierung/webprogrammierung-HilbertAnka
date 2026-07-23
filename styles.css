@@ -1247,11 +1247,10 @@ footer ul li button:hover {
   padding-left: clamp(1rem, 10%, 10rem);
   padding-right: clamp(1rem, 10%, 10rem);
   width: min(125ch, 100%);
-}
-
-.gallery-text-subpage {
   margin-top: clamp(1rem, 2.5vw, 4rem);
 }
+
+
 
 .gallery-abstract ul,
 #gallery {
@@ -1515,6 +1514,7 @@ footer ul li button:hover {
 
 .studio-insights-intro {
   margin-inline: auto;
+  margin-top: clamp(1rem, 2.5vw, 4rem);
   padding-top: clamp(0rem, 0.75vw, 1.5rem);
   padding-bottom: clamp(0rem, 0.5vw, 1rem);
   padding-left: clamp(1rem, 10%, 10rem);
